@@ -1,5 +1,11 @@
 import {BooleanLike} from "./generic";
 
+export type ProductSellAsVariants = 0;
+export type ProductSellAsSelf = 1;
+export type ProductSellAsMix = 3;
+export type ProductSellAsSingles = 4;
+
+export type ProductSellAs = ProductSellAsVariants | ProductSellAsSelf | ProductSellAsMix | ProductSellAsSingles;
 
 export interface ProductSEO {
     changefreq: string,
@@ -215,3 +221,12 @@ export interface ProductSeason {
 }
 
 
+export interface ProductListItem extends ProductBase {
+    variantsCount: number,
+    mixesCount: number,
+    colorsCount: number,
+}
+
+export interface ProductList {
+    [key:string]: ProductListItem,
+}
