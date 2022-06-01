@@ -1,6 +1,6 @@
 {
   "name": "b2b-types",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "typescript typings for Chums B2B & associated apps",
   "main": "",
   "types": "src/index.d.ts",
