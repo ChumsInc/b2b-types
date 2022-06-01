@@ -1,26 +1,6 @@
 import {BooleanLike} from "./generic";
-import {BasicCustomer, CustomerKey} from "./customer";
-import {JwtPayload} from "jwt-decode";
-export type {JwtPayload};
+import {BasicCustomer} from "./customer";
 
-
-export interface LocalAuth {
-    email: string,
-    password: string,
-}
-
-export interface UserLocalToken extends JwtPayload {
-    user?:UserProfile,
-    accounts?: UserCustomerAccess[],
-    roles?: UserRole[],
-    picture?: string|null,
-}
-
-export interface UserGoogleToken extends JwtPayload {
-    email?: string,
-    name?: string,
-    picture?: string,
-}
 
 export interface UserProfile {
     id: number;
