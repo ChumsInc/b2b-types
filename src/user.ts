@@ -1,6 +1,7 @@
 import {BooleanLike} from "./generic";
 import {BasicCustomer, CustomerKey} from "./customer";
 import {JwtPayload} from "jwt-decode";
+export type {JwtPayload};
 
 
 export interface LocalAuth {
