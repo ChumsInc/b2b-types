@@ -172,6 +172,7 @@ export interface ProductColor {
     code: string,
     name: string,
     swatchCode?: string|null,
+    active?: boolean|null,
 }
 
 export interface ProductAdditionalData {
@@ -246,4 +247,14 @@ export interface ProductListItem {
 
 export interface ProductList {
     [key:string]: ProductListItem,
+}
+
+export interface ColorProductUsage {
+    productId: number,
+    keyword: string,
+    name: string,
+    itemCode: string,
+    status: boolean,
+    swatchCode: string|null,
+    image: string|null,
 }
