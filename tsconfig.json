@@ -11,8 +11,7 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react",
-    "outDir": "./dist/",
-//    "declaration": true,
+    "declaration": true,
     "noImplicitAny": true,
     "sourceMap": true
   },
