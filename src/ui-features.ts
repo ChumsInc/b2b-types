@@ -36,6 +36,7 @@ export interface MenuItem {
     priority: number,
     url: string,
     status: BooleanLike,
+    menuId?: number,
     menu?: Menu,
 }
 

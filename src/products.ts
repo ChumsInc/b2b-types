@@ -221,10 +221,27 @@ export interface ProductSeason {
 }
 
 
-export interface ProductListItem extends ProductBase {
+export interface ProductListItem {
+    id: number,
+    keyword:string,
+    name: string,
+    itemCode: string,
+    status: boolean,
+    sellAs: SellAs,
+    image: string|null,
+    manufacturersId: number,
+    defaultParentProductsId: number,
+    parentProductKeyword: string|null,
     variantsCount: number,
     mixesCount: number,
     colorsCount: number,
+    redirectToParent: boolean|null,
+    availableForSale: boolean,
+    minPrice?: number,
+    maxPrice?: number,
+    salePrice?: number,
+    product_season_id: number,
+    season_code?: string|null,
 }
 
 export interface ProductList {
