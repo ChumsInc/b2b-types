@@ -24,7 +24,7 @@ export interface ProductCategory {
     status: BooleanLike,
     changefreq: string,
     priority: number,
-    timestamp: string,
+    timestamp?: string,
     children: ProductCategoryChild[],
     css: string,
     lifestyle: string|null,
@@ -45,7 +45,7 @@ export interface ProductCategoryChild {
     categoriesId: number,   // should always be zero?
     priority: number,
     status: BooleanLike,
-    timestamp: string,
+    timestamp?: string,
 }
 
 export interface CategoryChildSection extends ProductCategoryChild {
@@ -84,7 +84,7 @@ export interface ProductVariant {
     isDefaultVariant: boolean,
     status: boolean,
     priority: number,
-    timestamp: string,
+    timestamp?: string,
     product: Product
 }
 
@@ -105,7 +105,7 @@ export interface ProductBase {
     QuantityAvailable: number,
     inactiveItem: BooleanLike,
     buffer: number|null,
-    timestamp: string|null,
+    timestamp?: string|null,
 }
 
 export interface BasicProduct extends ProductBase {
@@ -124,8 +124,8 @@ export interface BasicProduct extends ProductBase {
     defaultCategoriesId: number,
     defaultCategoryKeyword: string|null,
     defaultParentProductsId: number,
-    options: string|unknown[],
-    requireOptions: string|unknown[],
+    options?: string|unknown[],
+    requireOptions?: string|unknown[],
     canDome: BooleanLike,
     canScreenPrint: BooleanLike,
     availableForSale: BooleanLike,
@@ -143,9 +143,9 @@ export interface BasicProduct extends ProductBase {
 }
 
 export interface Product extends BasicProduct {
-    mix: ProductMixVariant|null,
-    items: ProductColorVariant[],
-    images: ProductAlternateImage[],
+    mix?: ProductMixVariant|null,
+    items?: ProductColorVariant[],
+    images?: ProductAlternateImage[],
     variants?: ProductVariant[],
 }
 
@@ -204,7 +204,7 @@ export interface ProductAlternateImage {
     altText: string,
     priority: number,
     status: BooleanLike,
-    timestamp: string,
+    timestamp?: string,
 }
 
 export interface ProductSeason {
@@ -217,7 +217,7 @@ export interface ProductSeason {
     properties?: {
         color?: string,
     },
-    timestamp: string
+    timestamp?: string
 }
 
 
