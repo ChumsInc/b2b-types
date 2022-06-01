@@ -1,4 +1,3 @@
-import {BooleanLike} from "./generic";
 import {BasicCustomer} from "./customer";
 
 
@@ -13,14 +12,14 @@ export interface UserProfile {
     state: string,
     zip: string,
     country: string,
-    internal_only: BooleanLike,
+    internal_only: boolean | 1 | 0,
     accountType: number,
-    active: BooleanLike,
-    notes: string|null,
-    created: string|null,
-    pwd_change_required: BooleanLike,
-    waitingauth: BooleanLike,
-    last_login: string|null,
+    active: boolean | 1 | 0,
+    notes: string | null,
+    created: string | null,
+    pwd_change_required: boolean | 1 | 0,
+    waitingauth: boolean | 1 | 0,
+    last_login: string | null,
     logins: number,
     hits: number,
     timestamp: string,
@@ -37,12 +36,12 @@ export interface UserCustomerAccess {
     Company: string,
     ARDivisionNo: string,
     CustomerNo: string,
-    isRepAccount: BooleanLike,
+    isRepAccount: boolean | 1 | 0,
     SalespersonDivisionNo: string,
     SalespersonNo: string,
-    CustomerName: string|null,
-    SalespersonName: string|null,
-    primaryAccount: BooleanLike,
+    CustomerName: string | null,
+    SalespersonName: string | null,
+    primaryAccount: boolean | 1 | 0,
     customers: number,
     shipToCustomers: number,
 }

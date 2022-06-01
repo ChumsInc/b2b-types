@@ -1,5 +1,3 @@
-import {BooleanLike} from "./generic";
-
 export type ProductSellAsVariants = 0;
 export type ProductSellAsSelf = 1;
 export type ProductSellAsMix = 3;
@@ -21,19 +19,19 @@ export interface ProductCategory {
     pageText: string,
     descriptionMeta: string,
     parentId: number,
-    status: BooleanLike,
+    status: boolean | 1 | 0,
     changefreq: string,
     priority: number,
     timestamp?: string,
     children: ProductCategoryChild[],
     css: string,
-    lifestyle: string|null,
+    lifestyle: string | null,
 }
 
 export interface ProductCategoryChild {
     id: number,
     parentId: number,
-    itemType: 'section'|'category'|'product'|'link',
+    itemType: 'section' | 'category' | 'product' | 'link',
     sectionTitle: string,
     sectionDescription: string,
     title: string,
@@ -44,7 +42,7 @@ export interface ProductCategoryChild {
     productsId: number,     // should always be zero?
     categoriesId: number,   // should always be zero?
     priority: number,
-    status: BooleanLike,
+    status: boolean | 1 | 0,
     timestamp?: string,
 }
 
@@ -70,11 +68,11 @@ export enum SellAs {
     Unavailable = 0,
     Self = 1 << 0,
     Mix = 1 << 1,
-    SelfMix = Self|Mix,
+    SelfMix = Self | Mix,
     Colors = 1 << 2
 }
 
-export type ProductType = 'R'|'F'|'K'|'D';
+export type ProductType = 'R' | 'F' | 'K' | 'D';
 
 export interface ProductVariant {
     id: number,
@@ -94,24 +92,24 @@ export interface ProductBase {
     variantProductID?: number,
     itemCode: string,
     status: boolean,
-    msrp: number|null,
-    stdPrice: number|null,
-    priceCode: string|null,
-    stdUM: string|null,
-    salesUM: string|null,
-    salesUMFactor: number|null,
-    shipWeight: number|string|null,
-    productType: ProductType|null,
+    msrp: number | null,
+    stdPrice: number | null,
+    priceCode: string | null,
+    stdUM: string | null,
+    salesUM: string | null,
+    salesUMFactor: number | null,
+    shipWeight: number | string | null,
+    productType: ProductType | null,
     QuantityAvailable: number,
-    inactiveItem: BooleanLike,
-    buffer: number|null,
-    timestamp?: string|null,
+    inactiveItem: boolean,
+    buffer: number | null,
+    timestamp?: string | null,
 }
 
 export interface BasicProduct extends ProductBase {
     keyword: string,
     name: string,
-    metaTitle: string|null,
+    metaTitle: string | null,
     description: string,
     details: string,
     image: string,
@@ -119,31 +117,31 @@ export interface BasicProduct extends ProductBase {
     manufacturersId: number,
     materialsId: number,
     sellAs: SellAs,
-    upc: string|null,
+    upc: string | null,
     defaultColor: string,
     defaultCategoriesId: number,
-    defaultCategoryKeyword: string|null,
+    defaultCategoryKeyword: string | null,
     defaultParentProductsId: number,
-    options?: string|unknown[],
-    requireOptions?: string|unknown[],
-    canDome: BooleanLike,
-    canScreenPrint: BooleanLike,
-    availableForSale: BooleanLike,
+    options?: string | unknown[],
+    requireOptions?: string | unknown[],
+    canDome: boolean,
+    canScreenPrint: boolean,
+    availableForSale: boolean,
     dateAvailable: string,
     redirectToParent: boolean,
-    parentProductKeyword: string|null,
+    parentProductKeyword: string | null,
     additionalData?: ProductAdditionalData,
-    product_season_id: number|null,
-    season_code: string|null,
-    season_description: string|null,
-    season_active: BooleanLike|null,
+    product_season_id: number | null,
+    season_code: string | null,
+    season_description: string | null,
+    season_active: boolean | null,
     season_available: boolean,
-    season_teaser: string|null,
-    anticipatedPrice?: string|number|null,
+    season_teaser: string | null,
+    anticipatedPrice?: string | number | null,
 }
 
 export interface Product extends BasicProduct {
-    mix?: ProductMixVariant|null,
+    mix?: ProductMixVariant | null,
     items?: ProductColorVariant[],
     images?: ProductAlternateImage[],
     variants?: ProductVariant[],
@@ -171,8 +169,8 @@ export interface ProductColor {
     id: number,
     code: string,
     name: string,
-    swatchCode?: string|null,
-    active?: boolean|null,
+    swatchCode?: string | null,
+    active?: boolean | null,
 }
 
 export interface ProductAdditionalData {
@@ -180,12 +178,12 @@ export interface ProductAdditionalData {
     subtitle?: string,
     formatted_name?: string,
     swatch_format?: string,
-    swatch_code?: string|null,
-    image_filename?: string|null,
-    season_id?: number|null,
+    swatch_code?: string | null,
+    image_filename?: string | null,
+    season_id?: number | null,
     season?: ProductSeason,
-    best_seller?: boolean|null,
-    upcycled?: boolean|null,
+    best_seller?: boolean | null,
+    upcycled?: boolean | null,
 }
 
 export interface ProductColorVariant extends ProductBase {
@@ -193,7 +191,7 @@ export interface ProductColorVariant extends ProductBase {
     colorsId: number,
     colorCode: string,
     colorName: string,
-    upc: string|null,
+    upc: string | null,
     additionalData?: ProductAdditionalData,
     color: ProductColor,
 }
@@ -204,7 +202,7 @@ export interface ProductAlternateImage {
     image: string,
     altText: string,
     priority: number,
-    status: BooleanLike,
+    status: boolean | 1 | 0,
     timestamp?: string,
 }
 
@@ -224,29 +222,29 @@ export interface ProductSeason {
 
 export interface ProductListItem {
     id: number,
-    keyword:string,
+    keyword: string,
     name: string,
     itemCode: string,
     status: boolean,
     sellAs: SellAs,
-    image: string|null,
+    image: string | null,
     manufacturersId: number,
     defaultParentProductsId: number,
-    parentProductKeyword: string|null,
+    parentProductKeyword: string | null,
     variantsCount: number,
     mixesCount: number,
     colorsCount: number,
-    redirectToParent: boolean|null,
+    redirectToParent: boolean | null,
     availableForSale: boolean,
     minPrice?: number,
     maxPrice?: number,
     salePrice?: number,
     product_season_id: number,
-    season_code?: string|null,
+    season_code?: string | null,
 }
 
 export interface ProductList {
-    [key:string]: ProductListItem,
+    [key: string]: ProductListItem,
 }
 
 export interface ColorProductUsage {
@@ -255,6 +253,6 @@ export interface ColorProductUsage {
     name: string,
     itemCode: string,
     status: boolean,
-    swatchCode: string|null,
-    image: string|null,
+    swatchCode: string | null,
+    image: string | null,
 }

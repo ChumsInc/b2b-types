@@ -1,16 +1,17 @@
-import {BooleanLike, YesNo} from "./generic";
+import {YesNo} from "./generic";
 
 export interface CustomerAddress {
     CustomerName: string,
-    AddressLine1: string|null,
-    AddressLine2: string|null,
-    AddressLine3: string|null,
-    City: string|null,
-    State: string|null,
-    ZipCode: string|null,
-    CountryCode: string|null,
+    AddressLine1: string | null,
+    AddressLine2: string | null,
+    AddressLine3: string | null,
+    City: string | null,
+    State: string | null,
+    ZipCode: string | null,
+    CountryCode: string | null,
     changed?: boolean,
 }
+
 export type CustomerAddressField = keyof CustomerAddress;
 
 export interface CustomerSalesperson {
@@ -20,16 +21,16 @@ export interface CustomerSalesperson {
 
 export interface Salesperson extends CustomerSalesperson {
     SalespersonName: string,
-    active: BooleanLike,
+    active: boolean | 1 | 0,
 }
 
 export interface CustomerKey {
     ARDivisionNo: string,
     CustomerNo: string,
-    ShipToCode?: string|null,
+    ShipToCode?: string | null,
 }
 
-export interface RecentCustomerKey extends CustomerKey{
+export interface RecentCustomerKey extends CustomerKey {
     ts: number,
 }
 
@@ -37,63 +38,64 @@ export interface RecentCustomerKey extends CustomerKey{
 export interface BasicCustomer extends CustomerKey {
     CustomerName?: string,
 }
+
 export interface Customer extends CustomerKey, CustomerAddress, CustomerSalesperson {
     CustomerName: string,
-    TelephoneNo: string|null,
+    TelephoneNo: string | null,
     EmailAddress: string,
 }
 
 export interface BillToCustomer extends CustomerKey, Customer, CustomerAddress {
-    TelephoneExt: string|null,
-    URLAddress: string|null,
-    ContactCode:string,
-    ShipMethod: string|null,
-    TaxSchedule:string|null,
-    DefaultPaymentType: string|null,
-    TermsCode: string|null,
+    TelephoneExt: string | null,
+    URLAddress: string | null,
+    ContactCode: string,
+    ShipMethod: string | null,
+    TaxSchedule: string | null,
+    DefaultPaymentType: string | null,
+    TermsCode: string | null,
     ResidentialAddress: YesNo,
-    CustomerType: string|null,
-    PriceLevel: string|null,
+    CustomerType: string | null,
+    PriceLevel: string | null,
     CreditHold: YesNo,
-    PrimaryShipToCode: string|null,
+    PrimaryShipToCode: string | null,
     DateEstablished: string,
-    InternetReseller: YesNo|null,
-    Reseller: YesNo|null,
+    InternetReseller: YesNo | null,
+    Reseller: YesNo | null,
     CustomerStatus: string,
 }
 
 export interface ShipToAddress {
     ShipToName: string,
-    ShipToAddress1: string|null,
-    ShipToAddress2: string|null,
-    ShipToAddress3: string|null,
-    ShipToCity: string|null,
-    ShipToState: string|null,
-    ShipToZipCode: string|null,
-    ShipToCountryCode: string|null,
+    ShipToAddress1: string | null,
+    ShipToAddress2: string | null,
+    ShipToAddress3: string | null,
+    ShipToCity: string | null,
+    ShipToState: string | null,
+    ShipToZipCode: string | null,
+    ShipToCountryCode: string | null,
 }
 
 export interface ShipToCustomer extends CustomerKey, ShipToAddress, CustomerSalesperson {
     ShipToCode: string,
     ShipToName: string,
-    TelephoneNo: string|null,
-    TelephoneExt: string|null,
+    TelephoneNo: string | null,
+    TelephoneExt: string | null,
     EmailAddress: string,
-    ContactCode: string|null,
+    ContactCode: string | null,
     ResidentialAddress: YesNo,
-    Reseller: YesNo|null,
+    Reseller: YesNo | null,
 }
 
 export interface CustomerContact extends CustomerKey, CustomerAddress {
     ContactCode: string,
     ContactName: string,
-    TelephoneNo1: string|null,
-    TelephoneExt1: string|null,
+    TelephoneNo1: string | null,
+    TelephoneExt1: string | null,
     EmailAddress: string,
-    ContactTitle: string|null,
+    ContactTitle: string | null,
 }
 
-export type PricingMethodType = 'O'|'D'|'C'|'M'|'P';
+export type PricingMethodType = 'O' | 'D' | 'C' | 'M' | 'P';
 
 export interface CustomerPriceRecord {
     PriceCode: string,
@@ -103,7 +105,7 @@ export interface CustomerPriceRecord {
 }
 
 export interface CustomerPriceList {
-    [key:string]: CustomerPriceRecord,
+    [key: string]: CustomerPriceRecord,
 }
 
 export interface CustomerUser {

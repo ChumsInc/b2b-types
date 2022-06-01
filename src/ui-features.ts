@@ -1,5 +1,3 @@
-import {BooleanLike} from "./generic";
-
 export interface Slide {
     id: number,
     name: string,
@@ -7,8 +5,8 @@ export interface Slide {
     mainImage: string,
     startDate: string,
     endDate: string,
-    cssClass: string|null,
-    actionURL: string|null,
+    cssClass: string | null,
+    actionURL: string | null,
     status: boolean,
     priority: number,
     target: string,
@@ -22,7 +20,7 @@ export interface Menu {
     title: string,
     description: string,
     className: string,
-    status: number|1|0,
+    status: number | 1 | 0,
     items?: MenuItem[],
     parents?: number[],
 }
@@ -35,7 +33,7 @@ export interface MenuItem {
     className: string,
     priority: number,
     url: string,
-    status: BooleanLike,
+    status: boolean | 1 | 0,
     menuId?: number,
     menu?: Menu,
 }
@@ -45,8 +43,8 @@ export interface Message {
     type: string,
     description: string,
     message: string,
-    start: string|null,
-    end: string|null,
+    start: string | null,
+    end: string | null,
     active: boolean | number,
     allow_nextday: boolean | number,
     allow_twoday: boolean | number,
@@ -54,7 +52,7 @@ export interface Message {
 
 export interface SearchResult {
     keyword: string,
-    parent: string|null,
+    parent: string | null,
     title: string,
     sku: string,
     pagetype: string,

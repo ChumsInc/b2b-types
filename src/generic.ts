@@ -9,7 +9,7 @@ export interface Keyword {
     title: string,
     parent: string,
     redirect_to_parent: number,
-    status:BooleanLike,
+    status: boolean | 1 | 0,
     lifestyle?: string,
     css?: string,
     subtitle?: string,
