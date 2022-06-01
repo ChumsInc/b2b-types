@@ -64,14 +64,6 @@ export interface CategoryChildProduct extends ProductCategoryChild {
     product: BasicProduct,
 }
 
-export enum SellAs {
-    Unavailable = 0,
-    Self = 1 << 0,
-    Mix = 1 << 1,
-    SelfMix = Self | Mix,
-    Colors = 1 << 2
-}
-
 export type ProductType = 'R' | 'F' | 'K' | 'D';
 
 export interface ProductVariant {
@@ -116,7 +108,7 @@ export interface BasicProduct extends ProductBase {
     taxClassId: number,
     manufacturersId: number,
     materialsId: number,
-    sellAs: SellAs,
+    sellAs: ProductSellAs,
     upc: string | null,
     defaultColor: string,
     defaultCategoriesId: number,
@@ -226,7 +218,7 @@ export interface ProductListItem {
     name: string,
     itemCode: string,
     status: boolean,
-    sellAs: SellAs,
+    sellAs: ProductSellAs,
     image: string | null,
     manufacturersId: number,
     defaultParentProductsId: number,
