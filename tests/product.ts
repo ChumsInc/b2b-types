@@ -1,4 +1,4 @@
-import {Product} from "./products";
+import {Product} from "../src/products";
 
 export const testProduct:Product =  {
     "id": 1073,
