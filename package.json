@@ -4,13 +4,20 @@
   "description": "typescript typings for Chums B2B & associated apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "author": "Steve Montgomery",
   "license": "ISC",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
+    "auto-changelog": "^2.4.0",
     "jwt-decode": "^3.1.2",
     "typescript": "^4.7.2"
+  },
+  "auto-changelog": {
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
