@@ -224,6 +224,7 @@ export interface ProductListItem {
     defaultParentProductsId: number,
     parentProductKeyword: string | null,
     variantsCount: number,
+    selfCount: number,
     mixesCount: number,
     colorsCount: number,
     redirectToParent: boolean | null,
