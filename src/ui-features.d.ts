@@ -20,7 +20,7 @@ export interface Menu {
     title: string,
     description: string,
     className: string,
-    status: number | 1 | 0,
+    status: boolean | 1 | 0,
     items?: MenuItem[],
     parents?: number[],
 }
