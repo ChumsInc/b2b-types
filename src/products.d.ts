@@ -232,7 +232,7 @@ export interface ProductListItem {
     minPrice?: number,
     maxPrice?: number,
     salePrice?: number,
-    product_season_id: number,
+    product_season_id: number|null,
     season_code?: string | null,
 }
 
