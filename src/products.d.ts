@@ -44,6 +44,8 @@ export interface ProductCategoryChild {
     priority: number,
     status: boolean | 1 | 0,
     timestamp?: string,
+    category?: ProductCategory,
+    product?: BasicProduct,
 }
 
 export interface CategoryChildSection extends ProductCategoryChild {
