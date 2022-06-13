@@ -77,7 +77,7 @@ export interface ProductVariantBase {
 }
 export interface ProductVariant extends ProductVariantBase {
     timestamp?: string,
-    product: Product
+    product?: Product
 }
 
 export interface ProductBase {
