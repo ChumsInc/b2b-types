@@ -1,4 +1,11 @@
-import {Product, ProductSellAsColors, ProductSellAsMix, ProductSellAsSelf, ProductSellAsVariants} from "./products";
+import {
+    Product,
+    ProductSellAsColors,
+    ProductSellAsMix,
+    ProductSellAsSelf,
+    ProductSellAsVariants,
+    ProductVariantBase
+} from "./products";
 
 export const SELL_AS_VARIANTS: ProductSellAsVariants = 0;
 export const SELL_AS_SELF: ProductSellAsSelf = 1;
@@ -51,3 +58,12 @@ export const defaultProduct: Product = {
 }
 
 
+export const defaultVariant:ProductVariantBase = {
+    id: 0,
+    parentProductID: 0,
+    variantProductID: 0,
+    title: '',
+    isDefaultVariant: false,
+    status: true,
+    priority: 0,
+}

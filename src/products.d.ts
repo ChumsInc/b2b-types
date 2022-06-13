@@ -66,7 +66,7 @@ export interface CategoryChildProduct extends ProductCategoryChild {
 
 export type ProductType = 'R' | 'F' | 'K' | 'D';
 
-export interface ProductVariant {
+export interface ProductVariantBase {
     id: number,
     parentProductID: number,
     variantProductID: number,
@@ -74,6 +74,8 @@ export interface ProductVariant {
     isDefaultVariant: boolean,
     status: boolean,
     priority: number,
+}
+export interface ProductVariant extends ProductVariantBase {
     timestamp?: string,
     product: Product
 }
