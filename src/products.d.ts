@@ -66,7 +66,7 @@ export interface CategoryChildProduct extends ProductCategoryChild {
 
 export type ProductType = 'R' | 'F' | 'K' | 'D';
 
-export interface ProductVariant extends ProductVariantBase {
+export interface ProductVariant {
     id: number,
     parentProductID: number,
     variantProductID: number,
