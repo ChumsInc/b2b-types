@@ -24,8 +24,8 @@ export interface ProductCategory {
     priority: number,
     timestamp?: string,
     children: ProductCategoryChild[],
-    css: string,
-    lifestyle: string | null,
+    css?: string,
+    lifestyle?: string | null,
 }
 
 export interface ProductCategoryChild {
