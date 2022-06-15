@@ -135,17 +135,19 @@ export interface BasicProduct extends ProductBase {
 }
 
 export interface Product extends BasicProduct {
-    mix?: ProductMixVariant | null,
-    items?: ProductColorVariant[],
+    mix?: ProductMixItem | null,
+    items?: ProductColorItem[],
     images?: ProductAlternateImage[],
     variants?: ProductVariant[],
 }
 
-export interface ProductMixVariant extends ProductBase {
+export interface ProductMixItem extends ProductBase {
     productId: number,
     mixName: string,
     items: ProductMixComponent[]
 }
+
+export type ProductMixVariant = ProductMixItem;
 
 export interface ProductMixComponent {
     id: number,
@@ -167,6 +169,12 @@ export interface ProductColor {
     active?: boolean | null,
 }
 
+export interface ProductColorItemAdditionalData {
+    swatch_code?: string | null,
+    image_filename?: string | null,
+    season_id?: number | null,
+}
+
 export interface ProductAdditionalData {
     size?: string,
     subtitle?: string,
@@ -180,15 +188,16 @@ export interface ProductAdditionalData {
     upcycled?: boolean | null,
 }
 
-export interface ProductColorVariant extends ProductBase {
+export interface ProductColorItem extends ProductBase {
     productId: number,
     colorsId: number,
     colorCode: string,
     colorName: string,
     upc?: string | null,
-    additionalData?: ProductAdditionalData,
+    additionalData?: ProductColorItemAdditionalData,
     color: ProductColor,
 }
+export type ProductColorVariant = ProductColorItem;
 
 export interface ProductAlternateImage {
     id: number,
