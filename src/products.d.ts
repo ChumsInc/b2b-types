@@ -153,12 +153,12 @@ export interface ProductMixComponent {
     id: number,
     mixID: number,
     itemCode: string,
-    itemQuantity: number,
+    itemQuantity?: number,
     colorsId: number,
-    color_code: string,
-    color_name: string,
-    color: ProductColor,
-    additionalData: ProductAdditionalData
+    color_code?: string,
+    color_name?: string,
+    color?: ProductColor,
+    additionalData?: ProductAdditionalData
 }
 
 export interface ProductColor {
@@ -173,6 +173,7 @@ export interface ProductColorItemAdditionalData {
     swatch_code?: string | null,
     image_filename?: string | null,
     season_id?: number | null,
+    season?: ProductSeason,
 }
 
 export interface ProductAdditionalData {
