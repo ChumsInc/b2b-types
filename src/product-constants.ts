@@ -4,7 +4,7 @@ import {
     ProductSellAsMix,
     ProductSellAsSelf,
     ProductSellAsVariants,
-    ProductVariantBase
+    ProductVariant
 } from "./products";
 
 export const SELL_AS_VARIANTS: ProductSellAsVariants = 0;
@@ -58,7 +58,7 @@ export const defaultProduct: Product = {
 }
 
 
-export const defaultVariant:ProductVariantBase = {
+export const defaultVariant:ProductVariant = {
     id: 0,
     parentProductID: 0,
     variantProductID: 0,
