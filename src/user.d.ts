@@ -1,4 +1,4 @@
-import {BasicCustomer} from "./customer";
+import {BasicCustomer, CustomerKey, CustomerSalesperson} from "./customer";
 
 
 export interface UserProfile {
@@ -30,7 +30,7 @@ export interface UserRole {
     role: string,
 }
 
-export interface UserCustomerAccess {
+export interface UserCustomerAccess extends CustomerKey, CustomerSalesperson {
     id: number,
     userid: number,
     Company: string,
