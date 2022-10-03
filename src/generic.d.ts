@@ -23,3 +23,4 @@ export interface Keyword {
 export interface B2BError extends Error {
     debug?: string,
 }
+
