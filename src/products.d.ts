@@ -28,10 +28,10 @@ export interface ProductCategory {
     lifestyle?: string | null,
 }
 
-export interface ProductCategoryChild {
+export interface GenericProductCategoryChild {
     id: number,
     parentId: number,
-    itemType: 'section' | 'category' | 'product' | 'link',
+    itemType: 'section'|'category'|'product'|'link',
     sectionTitle: string,
     sectionDescription: string,
     title: string,
@@ -42,29 +42,36 @@ export interface ProductCategoryChild {
     productsId: number,     // should always be zero?
     categoriesId: number,   // should always be zero?
     priority: number,
-    status: boolean | 1 | 0,
-    timestamp?: string,
-    category?: ProductCategory,
-    product?: BasicProduct,
+    status: BooleanLike,
+    timestamp: string,
 }
-
-export interface CategoryChildSection extends ProductCategoryChild {
+export interface CategoryChildSection extends GenericProductCategoryChild {
     itemType: 'section',
     productsId: 0,     // should always be zero?
     categoriesId: 0,   // should always be zero?
 }
 
-export interface CategoryChildCategory extends ProductCategoryChild {
+export interface CategoryChildCategory extends GenericProductCategoryChild {
     itemType: 'category',
     productsId: 0,
     category: ProductCategory,
 }
 
-export interface CategoryChildProduct extends ProductCategoryChild {
+export interface CategoryChildProduct extends GenericProductCategoryChild {
     itemType: 'product',
     categoriesId: 0,
     product: BasicProduct,
 }
+
+export interface CategoryChildLink extends GenericProductCategoryChild {
+    itemType: 'link',
+    categoriesId: 0,
+    urlOverride: string;
+}
+
+export type ProductCategoryChild = CategoryChildSection | CategoryChildCategory | CategoryChildProduct | CategoryChildLink;
+
+
 
 export type ProductType = 'R' | 'F' | 'K' | 'D';
 
