@@ -139,14 +139,25 @@ export interface BasicProduct extends ProductBase {
     season_available: boolean,
     season_teaser: string | null,
     anticipatedPrice?: string | number | null,
+    images?: ProductAlternateImage[],
 }
 
-export interface Product extends BasicProduct {
-    mix?: ProductMixItem | null,
-    items?: ProductColorItem[],
-    images?: ProductAlternateImage[],
-    variants?: ProductVariant[],
+export type SellAsSelfProduct = BasicProduct;
+
+export interface SellAsVariantsProduct extends BasicProduct {
+    variants: ProductVariant[];
 }
+
+export interface SellAsMixProduct extends BasicProduct {
+    mix: ProductMixItem;
+}
+
+export interface SellAsColorsProduct extends BasicProduct {
+    items: ProductColorItem[];
+}
+
+export type Product = SellAsSelfProduct | SellAsVariantsProduct | SellAsMixProduct | SellAsColorsProduct;
+
 
 export interface ProductMixItem extends ProductBase {
     productId: number,
