@@ -44,7 +44,7 @@ export const defaultProduct: Product = {
     itemCode: '',
     keyword: '',
     status: true,
-    sellAs: SELL_AS_VARIANTS,
+    sellAs: SELL_AS_SELF,
     image: '',
     manufacturersId: 12,
     defaultParentProductsId: 0,

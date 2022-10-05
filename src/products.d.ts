@@ -142,17 +142,22 @@ export interface BasicProduct extends ProductBase {
     images?: ProductAlternateImage[],
 }
 
-export type SellAsSelfProduct = BasicProduct;
+export interface SellAsSelfProduct extends BasicProduct {
+    sellAs: ProductSellAsSelf;
+}
 
 export interface SellAsVariantsProduct extends BasicProduct {
+    sellAs: ProductSellAsVariants;
     variants: ProductVariant[];
 }
 
 export interface SellAsMixProduct extends BasicProduct {
+    sellAs: ProductSellAsMix;
     mix: ProductMixItem;
 }
 
 export interface SellAsColorsProduct extends BasicProduct {
+    sellAs: ProductSellAsColors;
     items: ProductColorItem[];
 }
 
