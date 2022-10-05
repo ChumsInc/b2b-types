@@ -1,3 +1,5 @@
+import {BooleanLike} from "./generic";
+
 export type ProductSellAsVariants = 0;
 export type ProductSellAsSelf = 1;
 export type ProductSellAsMix = 3;
@@ -284,3 +286,4 @@ export interface ColorProductUsage {
     swatchCode: string | null,
     image: string | null,
 }
+

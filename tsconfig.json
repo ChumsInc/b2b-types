@@ -13,8 +13,9 @@
     "jsx": "react",
     "declaration": true,
     "noImplicitAny": true,
-    "sourceMap": true,
-    "outDir": "lib"
+    "sourceMap": false,
+    "outDir": "lib",
+    "sourceRoot": "src"
   },
   "include": [
     "src/**/*"
