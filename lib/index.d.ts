@@ -1,5 +1,6 @@
 export * from './b2b-error';
 export * from './customer';
+export * from './email-response';
 export * from './generic';
 export * from './invoice';
 export * from './keyword';
