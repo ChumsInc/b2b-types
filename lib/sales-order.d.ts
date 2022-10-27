@@ -110,6 +110,6 @@ export interface SalesOrderDetailLine {
 export interface SalesOrder extends SalesOrderHeader {
     invoices: string[];
     detail: SalesOrderDetailLine[];
-    payment: unknown[];
-    b2bUsers: string[];
+    payment?: unknown[];
+    b2bUsers?: string[];
 }
