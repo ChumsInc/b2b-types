@@ -4,11 +4,13 @@ import {SalesOrderItemType} from "./sales-order";
 export type InvoiceType = 'IN'|'CM'|'DM'|'AD'|'FC'|'CA'|'XD';
 export type InvoiceOrderType = 'B'|'S'|'1';
 
-
-export interface InvoiceHeader {
+export interface InvoiceKey {
     InvoiceNo: string;
     HeaderSeqNo: string;
     InvoiceType: InvoiceType;
+}
+
+export interface InvoiceHeader extends InvoiceKey {
     InvoiceDate: string;
     SalesOrderNo: string|null;
     OrderDate: string|null;
