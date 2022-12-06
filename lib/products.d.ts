@@ -1,9 +1,9 @@
 import { BooleanLike } from "./generic";
-export declare type ProductSellAsVariants = 0;
-export declare type ProductSellAsSelf = 1;
-export declare type ProductSellAsMix = 3;
-export declare type ProductSellAsColors = 4;
-export declare type ProductSellAs = ProductSellAsVariants | ProductSellAsSelf | ProductSellAsMix | ProductSellAsColors;
+export type ProductSellAsVariants = 0;
+export type ProductSellAsSelf = 1;
+export type ProductSellAsMix = 3;
+export type ProductSellAsColors = 4;
+export type ProductSellAs = ProductSellAsVariants | ProductSellAsSelf | ProductSellAsMix | ProductSellAsColors;
 export interface ProductSEO {
     changefreq: string;
     descriptionMeta: string;
@@ -61,8 +61,8 @@ export interface CategoryChildLink extends GenericProductCategoryChild {
     categoriesId: 0;
     urlOverride: string;
 }
-export declare type ProductCategoryChild = CategoryChildSection | CategoryChildCategory | CategoryChildProduct | CategoryChildLink;
-export declare type ProductType = 'R' | 'F' | 'K' | 'D';
+export type ProductCategoryChild = CategoryChildSection | CategoryChildCategory | CategoryChildProduct | CategoryChildLink;
+export type ProductType = 'R' | 'F' | 'K' | 'D';
 export interface ProductVariant {
     id: number;
     parentProductID: number;
@@ -142,13 +142,13 @@ export interface SellAsColorsProduct extends BasicProduct {
     sellAs: ProductSellAsColors;
     items: ProductColorItem[];
 }
-export declare type Product = SellAsSelfProduct | SellAsVariantsProduct | SellAsMixProduct | SellAsColorsProduct;
+export type Product = SellAsSelfProduct | SellAsVariantsProduct | SellAsMixProduct | SellAsColorsProduct;
 export interface ProductMixItem extends ProductBase {
     productId: number;
     mixName: string;
     items: ProductMixComponent[];
 }
-export declare type ProductMixVariant = ProductMixItem;
+export type ProductMixVariant = ProductMixItem;
 export interface ProductMixComponent {
     id: number;
     mixID: number;
@@ -194,7 +194,7 @@ export interface ProductColorItem extends ProductBase {
     additionalData?: ProductColorItemAdditionalData;
     color: ProductColor;
 }
-export declare type ProductColorVariant = ProductColorItem;
+export type ProductColorVariant = ProductColorItem;
 export interface ProductAlternateImage {
     id: number;
     productId: number;

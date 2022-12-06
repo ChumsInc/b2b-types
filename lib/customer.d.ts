@@ -10,7 +10,7 @@ export interface CustomerAddress {
     CountryCode: string | null;
     changed?: boolean;
 }
-export declare type CustomerAddressField = keyof CustomerAddress;
+export type CustomerAddressField = keyof CustomerAddress;
 export interface CustomerSalesperson {
     SalespersonDivisionNo: string;
     SalespersonNo: string;
@@ -81,7 +81,7 @@ export interface CustomerContact extends CustomerKey, CustomerAddress {
     EmailAddress: string;
     ContactTitle: string | null;
 }
-export declare type PricingMethodType = 'O' | 'D' | 'C' | 'M' | 'P';
+export type PricingMethodType = 'O' | 'D' | 'C' | 'M' | 'P';
 export interface CustomerPriceRecord {
     PriceCode: string;
     ItemCode: string;

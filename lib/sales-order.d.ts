@@ -1,6 +1,6 @@
-export declare type SalesOrderType = 'S' | 'B' | 'Q' | 'M' | 'R' | 'P';
-export declare type SalesOrderStatus = 'N' | 'O' | 'C' | 'H';
-export declare type SalesOrderItemType = '1' | '2' | '3' | '4' | '5';
+export type SalesOrderType = 'S' | 'B' | 'Q' | 'M' | 'R' | 'P';
+export type SalesOrderStatus = 'N' | 'O' | 'C' | 'H';
+export type SalesOrderItemType = '1' | '2' | '3' | '4' | '5';
 export interface SalesOrderHeader {
     Company: string;
     SalesOrderNo: string;

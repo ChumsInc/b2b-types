@@ -1,7 +1,7 @@
 import { ProductType } from './products';
 import { SalesOrderItemType } from "./sales-order";
-export declare type InvoiceType = 'IN' | 'CM' | 'DM' | 'AD' | 'FC' | 'CA' | 'XD';
-export declare type InvoiceOrderType = 'B' | 'S' | '1';
+export type InvoiceType = 'IN' | 'CM' | 'DM' | 'AD' | 'FC' | 'CA' | 'XD';
+export type InvoiceOrderType = 'B' | 'S' | '1';
 export interface InvoiceKey {
     InvoiceNo: string;
     HeaderSeqNo: string;
