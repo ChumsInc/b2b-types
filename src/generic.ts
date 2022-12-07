@@ -10,4 +10,4 @@ export interface Editable {
     changed?: boolean;
 }
 
-export type actionStatus = 'idle'|'loading'|'saving'|'deleting';
+export type ActionStatus = 'idle'|'loading'|'saving'|'deleting';
