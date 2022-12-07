@@ -9,3 +9,5 @@ export interface B2BError extends Error {
 export interface Editable {
     changed?: boolean;
 }
+
+export type actionStatus = 'idle'|'loading'|'saving'|'deleting';
