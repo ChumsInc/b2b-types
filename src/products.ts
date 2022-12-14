@@ -163,7 +163,7 @@ export interface SellAsColorsProduct extends BasicProduct {
     items: ProductColorItem[];
 }
 
-export type Product = SellAsSelfProduct | SellAsVariantsProduct | SellAsMixProduct | SellAsColorsProduct;
+export type Product = BasicProduct | SellAsSelfProduct | SellAsVariantsProduct | SellAsMixProduct | SellAsColorsProduct;
 
 
 export interface ProductMixItem extends ProductBase {
