@@ -223,21 +223,22 @@ export interface ProductListItem {
     itemCode: string;
     status: boolean;
     sellAs: ProductSellAs;
-    image: string | null;
+    image: string;
     manufacturersId: number;
     defaultParentProductsId: number;
     parentProductKeyword: string | null;
+    defaultCategoriesId: number | null;
     variantsCount: number;
     selfCount: number;
     mixesCount: number;
     colorsCount: number;
-    redirectToParent: boolean | null;
+    redirectToParent: boolean;
     availableForSale: boolean;
     minPrice?: string | number;
     maxPrice?: string | number;
     salePrice?: string | number;
     product_season_id: number | null;
-    season_code?: string | null;
+    season_code: string | null;
 }
 export interface ProductList {
     [key: string]: ProductListItem;
