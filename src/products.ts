@@ -142,6 +142,7 @@ export interface BasicProduct extends ProductBase {
     season_teaser: string | null,
     anticipatedPrice?: string | number | null,
     images?: ProductAlternateImage[],
+    productStatus?: string|null;
 }
 
 export interface SellAsSelfProduct extends BasicProduct {
