@@ -170,7 +170,8 @@ export type Product = BasicProduct | SellAsSelfProduct | SellAsVariantsProduct |
 export interface ProductMixItem extends ProductBase {
     productId: number,
     mixName: string,
-    items: ProductMixComponent[]
+    items: ProductMixComponent[];
+    productStatus?: string|null;
 }
 
 export type ProductMixVariant = ProductMixItem;
@@ -185,6 +186,7 @@ export interface ProductMixComponent {
     color_name?: string,
     color?: ProductColor,
     additionalData?: ProductAdditionalData
+    productStatus?: string|null;
 }
 
 export interface ProductColor {
@@ -222,7 +224,8 @@ export interface ProductColorItem extends ProductBase {
     colorName: string,
     upc?: string | null,
     additionalData?: ProductColorItemAdditionalData,
-    color: ProductColor,
+    color: ProductColor;
+    productStatus?: string|null;
 }
 export type ProductColorVariant = ProductColorItem;
 

@@ -148,6 +148,7 @@ export interface ProductMixItem extends ProductBase {
     productId: number;
     mixName: string;
     items: ProductMixComponent[];
+    productStatus?: string | null;
 }
 export type ProductMixVariant = ProductMixItem;
 export interface ProductMixComponent {
@@ -160,6 +161,7 @@ export interface ProductMixComponent {
     color_name?: string;
     color?: ProductColor;
     additionalData?: ProductAdditionalData;
+    productStatus?: string | null;
 }
 export interface ProductColor {
     id: number;
@@ -194,6 +196,7 @@ export interface ProductColorItem extends ProductBase {
     upc?: string | null;
     additionalData?: ProductColorItemAdditionalData;
     color: ProductColor;
+    productStatus?: string | null;
 }
 export type ProductColorVariant = ProductColorItem;
 export interface ProductAlternateImage {
