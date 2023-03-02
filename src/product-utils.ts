@@ -28,18 +28,18 @@ export function isCategoryChildLink(child: CategoryChildLink): child is Category
     return (child as CategoryChildLink).itemType === 'link';
 }
 
-export function isSellAsSelf(product: Product): product is SellAsSelfProduct {
-    return (product as SellAsSelfProduct).sellAs === SELL_AS_SELF;
+export function isSellAsSelf(product: Product|null): product is SellAsSelfProduct {
+    return !!product && (product as SellAsSelfProduct).sellAs === SELL_AS_SELF;
 }
 
-export function isSellAsVariants(product: Product): product is SellAsVariantsProduct {
-    return (product as SellAsVariantsProduct).sellAs === SELL_AS_VARIANTS;
+export function isSellAsVariants(product: Product|null): product is SellAsVariantsProduct {
+    return !!product && (product as SellAsVariantsProduct).sellAs === SELL_AS_VARIANTS;
 }
 
-export function isSellAsMix(product: Product): product is SellAsMixProduct {
-    return (product as SellAsMixProduct).sellAs === SELL_AS_MIX;
+export function isSellAsMix(product: Product|null): product is SellAsMixProduct {
+    return !!product && (product as SellAsMixProduct).sellAs === SELL_AS_MIX;
 }
 
-export function isSellAsColors(product: Product): product is SellAsColorsProduct {
-    return (product as SellAsColorsProduct).sellAs === SELL_AS_COLORS;
+export function isSellAsColors(product: Product|null): product is SellAsColorsProduct {
+    return !!product && (product as SellAsColorsProduct).sellAs === SELL_AS_COLORS;
 }

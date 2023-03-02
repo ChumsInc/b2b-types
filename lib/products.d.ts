@@ -199,11 +199,13 @@ export interface ProductColorItem extends ProductBase {
     productStatus?: string | null;
 }
 export type ProductColorVariant = ProductColorItem;
-export interface ProductAlternateImage {
-    id: number;
-    productId: number;
+export interface ProductImage {
     image: string;
     altText: string;
+}
+export interface ProductAlternateImage extends ProductImage {
+    id: number;
+    productId: number;
     priority: number;
     status: boolean | 1 | 0;
     timestamp?: string;
@@ -255,4 +257,29 @@ export interface ColorProductUsage {
     status: boolean;
     swatchCode: string | null;
     image: string | null;
+}
+export interface CartItem {
+    itemCode: string;
+    quantity: number;
+    discountPercent?: number;
+    comment?: string;
+    priceLevel?: string;
+    lineKey?: string;
+    promoCode?: string;
+}
+export interface CartProduct extends CartItem {
+    productId: number;
+    name: string;
+    colorCode?: string;
+    image: string;
+    msrp?: string | number | null;
+    stdPrice?: string | number | null;
+    priceCode?: string | null;
+    salesUM?: string | null;
+    salesUMFactor?: number | null;
+    seasonCode?: string | null;
+    seasonAvailable?: boolean | null;
+    seasonDescription?: string | null;
+    seasonTeaser?: string | null;
+    quantityAvailable?: number;
 }

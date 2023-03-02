@@ -73,8 +73,6 @@ export interface CategoryChildLink extends GenericProductCategoryChild {
 
 export type ProductCategoryChild = CategoryChildSection | CategoryChildCategory | CategoryChildProduct | CategoryChildLink;
 
-
-
 export type ProductType = 'R' | 'F' | 'K' | 'D';
 
 export interface ProductVariant {
@@ -229,11 +227,14 @@ export interface ProductColorItem extends ProductBase {
 }
 export type ProductColorVariant = ProductColorItem;
 
-export interface ProductAlternateImage {
+export interface ProductImage {
+    image: string;
+    altText: string;
+}
+
+export interface ProductAlternateImage extends ProductImage {
     id: number,
     productId: number,
-    image: string,
-    altText: string,
     priority: number,
     status: boolean | 1 | 0,
     timestamp?: string,
@@ -291,3 +292,29 @@ export interface ColorProductUsage {
     image: string | null,
 }
 
+export interface CartItem {
+    itemCode: string;
+    quantity: number;
+    discountPercent?: number;
+    comment?: string;
+    priceLevel?: string;
+    lineKey?:string;
+    promoCode?: string;
+}
+
+export interface CartProduct extends CartItem {
+    productId: number,
+    name: string,
+    colorCode?:string;
+    image: string;
+    msrp?: string | number | null;
+    stdPrice?: string | number | null;
+    priceCode?: string | null;
+    salesUM?: string | null;
+    salesUMFactor?: number | null;
+    seasonCode?: string|null;
+    seasonAvailable?: boolean|null;
+    seasonDescription?: string|null;
+    seasonTeaser?: string|null;
+    quantityAvailable?: number;
+}

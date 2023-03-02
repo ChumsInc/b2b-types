@@ -1,4 +1,4 @@
-export default class B2BError extends Error {
+export class B2BError extends Error {
     url: string;
     debug: any;
 
@@ -9,3 +9,5 @@ export default class B2BError extends Error {
         this.url = url;
     }
 }
+
+export default B2BError;
