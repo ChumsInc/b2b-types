@@ -33,7 +33,7 @@ export type {
 } from './invoice';
 export type {Keyword} from './keyword';
 export type {
-    ProductImage,
+    B2BProductImage,
     CartProduct,
     CartItem,
     ProductAlternateImage,

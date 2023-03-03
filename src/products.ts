@@ -227,12 +227,12 @@ export interface ProductColorItem extends ProductBase {
 }
 export type ProductColorVariant = ProductColorItem;
 
-export interface ProductImage {
+export interface B2BProductImage {
     image: string;
     altText: string;
 }
 
-export interface ProductAlternateImage extends ProductImage {
+export interface ProductAlternateImage extends B2BProductImage {
     id: number,
     productId: number,
     priority: number,
