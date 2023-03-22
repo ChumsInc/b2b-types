@@ -1,3 +1,4 @@
+import { BooleanLike } from "./generic";
 export interface Slide {
     id: number;
     name: string;
@@ -61,4 +62,19 @@ export interface SearchResult {
         swatch_format?: string;
     };
     score: number;
+}
+export interface ContentPage {
+    id: number;
+    keyword: string | null;
+    title: string | null;
+    metaDescription: string | null;
+    content: string | null;
+    filename: string | null;
+    status: boolean | BooleanLike;
+    changefreq: string;
+    priority: number;
+    lifestyle?: string | null;
+    css?: string | null;
+    subtitle?: string | null;
+    searchWords: string | null;
 }

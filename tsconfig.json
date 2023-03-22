@@ -15,7 +15,6 @@
     "noImplicitAny": true,
     "sourceMap": false,
     "outDir": "lib",
-    "sourceRoot": "src"
   },
   "include": [
     "src/**/*"

@@ -76,7 +76,7 @@ export type {PromoCode} from './promo-code';
 export type {
     SalesOrder, SalesOrderHeader, SalesOrderDetailLine, SalesOrderStatus, SalesOrderType, SalesOrderItemType
 } from './sales-order';
-export type {Menu, MenuItem, Message, Slide, SearchResult} from './ui-features';
+export type {Menu, MenuItem, Message, Slide, SearchResult, ContentPage} from './ui-features';
 export type {RecentCustomer, UserCustomerAccess, UserProfile, UserRole} from './user';
 
 export {
