@@ -1,4 +1,5 @@
 import {YesNo} from "./generic";
+import {UserAccessType} from "./user";
 
 export interface CustomerAddress {
     CustomerName: string,
@@ -109,11 +110,13 @@ export interface CustomerPriceList {
 }
 
 export interface CustomerUser {
-    id: number,
-    name: string,
-    email: string,
-    accountType: number         //@todo create enum with customer types
+    id: number;
+    name: string;
+    email: string;
+    accountType: UserAccessType;
 }
+
+export type AccountCustomerUser = CustomerUser & CustomerKey;
 
 export interface CustomerPaymentCard extends CustomerKey {
     PaymentType: string,

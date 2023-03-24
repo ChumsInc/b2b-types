@@ -1,5 +1,5 @@
 export { B2BError } from './b2b-error';
-export type { BasicCustomer, CustomerKey, CustomerSalesperson, Customer, CustomerAddress, CustomerAddressField, BillToCustomer, CustomerContact, RecentCustomerKey, CustomerPaymentCard, ShipToAddress, CustomerPriceList, CustomerPriceRecord, CustomerUser, Salesperson, ShipToCustomer, PricingMethodType } from './customer';
+export type { AccountCustomerUser, BasicCustomer, BillToCustomer, CustomerKey, CustomerSalesperson, Customer, CustomerAddress, CustomerAddressField, CustomerUser, CustomerContact, CustomerPaymentCard, CustomerPriceList, CustomerPriceRecord, PricingMethodType, RecentCustomerKey, Salesperson, ShipToAddress, ShipToCustomer, } from './customer';
 export type { EmailResponse } from './email-response';
 export type { ActionStatus, YesNo, Editable, BooleanLike } from './generic';
 export type { Invoice, InvoiceDetail, InvoiceHeader, InvoiceKey, InvoiceOrderType, InvoicePaperless, InvoicePayment, InvoiceType, InvoiceTracking } from './invoice';
@@ -8,6 +8,6 @@ export type { B2BProductImage, CartProduct, CartItem, ProductAlternateImage, Bas
 export type { PromoCode } from './promo-code';
 export type { SalesOrder, SalesOrderHeader, SalesOrderDetailLine, SalesOrderStatus, SalesOrderType, SalesOrderItemType } from './sales-order';
 export type { Menu, MenuItem, Message, Slide, SearchResult, ContentPage } from './ui-features';
-export type { RecentCustomer, UserCustomerAccess, UserProfile, UserRole } from './user';
+export type { RecentCustomer, UserCustomerAccess, UserProfile, UserRole, UserAccessType } from './user';
 export { defaultProduct, defaultVariant, SELL_AS_VARIANTS, SELL_AS_COLORS, SELL_AS_MIX, SELL_AS_SELF } from './product-constants';
 export { isCategoryChildCategory, isCategoryChildLink, isCategoryChildSection, isCategoryChildProduct, isSellAsColors, isSellAsMix, isSellAsSelf, isSellAsVariants } from './product-utils';

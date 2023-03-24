@@ -1,5 +1,6 @@
 import {BasicCustomer, CustomerKey, CustomerSalesperson} from "./customer";
 
+export type UserAccessType = 1 | 2 | 4;
 
 export interface UserProfile {
     id: number;
@@ -13,7 +14,7 @@ export interface UserProfile {
     zip: string,
     country: string,
     internal_only: boolean | 1 | 0,
-    accountType: number,
+    accountType: UserAccessType,
     active: boolean | 1 | 0,
     notes: string | null,
     created: string | null,

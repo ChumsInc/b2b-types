@@ -1,4 +1,5 @@
 import { YesNo } from "./generic";
+import { UserAccessType } from "./user";
 export interface CustomerAddress {
     CustomerName: string;
     AddressLine1: string | null;
@@ -95,8 +96,9 @@ export interface CustomerUser {
     id: number;
     name: string;
     email: string;
-    accountType: number;
+    accountType: UserAccessType;
 }
+export type AccountCustomerUser = CustomerUser & CustomerKey;
 export interface CustomerPaymentCard extends CustomerKey {
     PaymentType: string;
     ExpirationDateYear: string;

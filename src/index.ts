@@ -1,22 +1,23 @@
 export {B2BError} from './b2b-error';
 export type {
+    AccountCustomerUser,
     BasicCustomer,
+    BillToCustomer,
     CustomerKey,
     CustomerSalesperson,
     Customer,
     CustomerAddress,
     CustomerAddressField,
-    BillToCustomer,
+    CustomerUser,
     CustomerContact,
-    RecentCustomerKey,
     CustomerPaymentCard,
-    ShipToAddress,
     CustomerPriceList,
     CustomerPriceRecord,
-    CustomerUser,
+    PricingMethodType,
+    RecentCustomerKey,
     Salesperson,
+    ShipToAddress,
     ShipToCustomer,
-    PricingMethodType
 } from './customer';
 export type {EmailResponse} from './email-response';
 export type {ActionStatus, YesNo, Editable, BooleanLike} from './generic';
@@ -77,7 +78,7 @@ export type {
     SalesOrder, SalesOrderHeader, SalesOrderDetailLine, SalesOrderStatus, SalesOrderType, SalesOrderItemType
 } from './sales-order';
 export type {Menu, MenuItem, Message, Slide, SearchResult, ContentPage} from './ui-features';
-export type {RecentCustomer, UserCustomerAccess, UserProfile, UserRole} from './user';
+export type {RecentCustomer, UserCustomerAccess, UserProfile, UserRole, UserAccessType} from './user';
 
 export {
     defaultProduct, defaultVariant, SELL_AS_VARIANTS, SELL_AS_COLORS, SELL_AS_MIX, SELL_AS_SELF
