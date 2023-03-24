@@ -114,6 +114,7 @@ export interface CustomerUser {
     name: string;
     email: string;
     accountType: UserAccessType;
+    notes?: string;
 }
 
 export type AccountCustomerUser = CustomerUser & CustomerKey;
