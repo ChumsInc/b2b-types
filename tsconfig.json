@@ -1,20 +1,13 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": "@tsconfig/node18",
 
   "compilerOptions": {
-    "lib": ["dom", "es2021"],
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "jsx": "react",
-    "declaration": true,
-    "noImplicitAny": true,
-    "sourceMap": false,
     "outDir": "lib",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "emitDeclarationOnly": false,
+    "declaration": true
   },
   "include": [
     "src/**/*"
