@@ -1,4 +1,4 @@
-import {BasicCustomer, CustomerKey, CustomerSalesperson} from "./customer";
+import {BasicCustomer, CustomerKey, CustomerSalesperson} from "./customer.js";
 
 export type UserAccessType = 1 | 2 | 4;
 

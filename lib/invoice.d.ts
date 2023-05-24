@@ -1,5 +1,5 @@
-import { ProductType } from './products';
-import { SalesOrderItemType } from "./sales-order";
+import { ProductType } from './products.js';
+import { SalesOrderItemType } from "./sales-order.js";
 export type InvoiceType = 'IN' | 'CM' | 'DM' | 'AD' | 'FC' | 'CA' | 'XD';
 export type InvoiceOrderType = 'B' | 'S' | '1';
 export interface InvoiceKey {

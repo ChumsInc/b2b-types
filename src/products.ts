@@ -1,4 +1,4 @@
-import {BooleanLike} from "./generic";
+import {BooleanLike} from "./generic.js";
 
 export type ProductSellAsVariants = 0;
 export type ProductSellAsSelf = 1;

@@ -1,4 +1,4 @@
-import { CategoryChildCategory, CategoryChildLink, CategoryChildProduct, CategoryChildSection, Product, ProductCategoryChild, SellAsColorsProduct, SellAsMixProduct, SellAsSelfProduct, SellAsVariantsProduct } from "./products";
+import { CategoryChildCategory, CategoryChildLink, CategoryChildProduct, CategoryChildSection, Product, ProductCategoryChild, SellAsColorsProduct, SellAsMixProduct, SellAsSelfProduct, SellAsVariantsProduct } from "./products.js";
 export declare function isCategoryChildSection(child: ProductCategoryChild): child is CategoryChildSection;
 export declare function isCategoryChildCategory(child: ProductCategoryChild): child is CategoryChildCategory;
 export declare function isCategoryChildProduct(child: ProductCategoryChild): child is CategoryChildProduct;

@@ -1,5 +1,5 @@
-import {YesNo} from "./generic";
-import {UserAccessType} from "./user";
+import {YesNo} from "./generic.js";
+import {UserAccessType} from "./user.js";
 
 export interface CustomerAddress {
     CustomerName: string,

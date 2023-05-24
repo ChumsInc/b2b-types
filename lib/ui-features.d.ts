@@ -1,4 +1,4 @@
-import { BooleanLike } from "./generic";
+import { BooleanLike } from "./generic.js";
 export interface Slide {
     id: number;
     name: string;

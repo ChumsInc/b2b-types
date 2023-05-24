@@ -9,8 +9,8 @@ import {
     SellAsMixProduct,
     SellAsSelfProduct,
     SellAsVariantsProduct
-} from "./products";
-import {SELL_AS_COLORS, SELL_AS_MIX, SELL_AS_SELF, SELL_AS_VARIANTS} from "./product-constants";
+} from "./products.js";
+import {SELL_AS_COLORS, SELL_AS_MIX, SELL_AS_SELF, SELL_AS_VARIANTS} from "./product-constants.js";
 
 export function isCategoryChildSection(child: ProductCategoryChild): child is CategoryChildSection {
     return (child as CategoryChildSection).itemType === 'section';

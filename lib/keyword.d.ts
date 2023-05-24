@@ -1,4 +1,4 @@
-import { BooleanLike } from "./generic";
+import { BooleanLike } from "./generic.js";
 export interface Keyword {
     id: number;
     pagetype: 'category' | 'product' | 'page';

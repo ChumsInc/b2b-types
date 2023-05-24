@@ -5,7 +5,7 @@ import {
     ProductSellAsSelf,
     ProductSellAsVariants,
     ProductVariant
-} from "./products";
+} from "./products.js";
 
 export const SELL_AS_VARIANTS: ProductSellAsVariants = 0;
 export const SELL_AS_SELF: ProductSellAsSelf = 1;
