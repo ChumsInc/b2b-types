@@ -50,3 +50,8 @@ export interface UserCustomerAccess extends CustomerKey, CustomerSalesperson {
 export interface RecentCustomer extends BasicCustomer {
     ts: number,
 }
+
+export interface UserCustomerAccess {
+    billTo: boolean;
+    shipTo: string[];
+}
