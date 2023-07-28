@@ -24,7 +24,7 @@ export function isCategoryChildProduct(child: ProductCategoryChild): child is Ca
     return (child as CategoryChildProduct).itemType === 'product';
 }
 
-export function isCategoryChildLink(child: CategoryChildLink): child is CategoryChildLink {
+export function isCategoryChildLink(child: ProductCategoryChild): child is CategoryChildLink {
     return (child as CategoryChildLink).itemType === 'link';
 }
 
