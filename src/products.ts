@@ -1,4 +1,5 @@
 import {BooleanLike} from "./generic.js";
+import {CustomerPriceRecord} from "./customer";
 
 export type ProductSellAsVariants = 0;
 export type ProductSellAsSelf = 1;
@@ -318,4 +319,6 @@ export interface CartProduct extends CartItem {
     seasonDescription?: string|null;
     seasonTeaser?: string|null;
     quantityAvailable?: number;
+    priceCodeRecord?: CustomerPriceRecord|null;
+    price?: string|null;
 }
