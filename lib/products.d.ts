@@ -276,6 +276,7 @@ export interface CartProduct extends CartItem {
     stdPrice?: string | number | null;
     priceCode?: string | null;
     salesUM?: string | null;
+    stdUM?: string | null;
     salesUMFactor?: number | null;
     seasonCode?: string | null;
     seasonAvailable?: boolean | null;
