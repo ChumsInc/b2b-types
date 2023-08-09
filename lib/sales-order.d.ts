@@ -1,5 +1,7 @@
+export type SalesOrderHeader_OrderStatus = 'N' | 'O' | 'C' | 'H';
+export type SalesOrderHistoryHeader_OrderStatus = 'A' | 'C' | 'X' | 'Q' | 'Z';
 export type SalesOrderType = 'S' | 'B' | 'Q' | 'M' | 'R' | 'P';
-export type SalesOrderStatus = 'N' | 'O' | 'C' | 'H';
+export type SalesOrderStatus = SalesOrderHeader_OrderStatus | SalesOrderHistoryHeader_OrderStatus;
 export type SalesOrderItemType = '1' | '2' | '3' | '4' | '5';
 export interface SalesOrderHeader {
     Company: string;
