@@ -1,3 +1,5 @@
+import {BillToAddress, ShipToAddress} from "./customer";
+
 export type SalesOrderHeader_OrderStatus = 'N'|'O'|'C'|'H';
 export type SalesOrderHistoryHeader_OrderStatus = 'A'|'C'|'X'|'Q'|'Z';
 
@@ -6,7 +8,7 @@ export type SalesOrderType = 'S'|'B'|'Q'|'M'|'R'|'P';
 export type SalesOrderStatus = SalesOrderHeader_OrderStatus | SalesOrderHistoryHeader_OrderStatus;
 export type SalesOrderItemType = '1'|'2'|'3'|'4'|'5';
 
-export interface SalesOrderHeader {
+export interface SalesOrderHeader extends BillToAddress, ShipToAddress {
     Company: string;
     SalesOrderNo: string;
     OrderDate: string;
@@ -15,23 +17,7 @@ export interface SalesOrderHeader {
     ShipExpireDate: string;
     ARDivisionNo: string;
     CustomerNo: string;
-    BillToName: string;
-    BillToAddress1: string;
-    BillToAddress2: string|null,
-    BillToAddress3: string|null,
-    BillToCity: string|null;
-    BillToState: string|null;
-    BillToZipCode: string|null;
-    BillToCountryCode: string|null;
     ShipToCode: string|null;
-    ShipToName: string|null;
-    ShipToAddress1: string|null;
-    ShipToAddress2: string|null;
-    ShipToAddress3: string|null;
-    ShipToCity: string|null;
-    ShipToState: string|null;
-    ShipToZipCode: string|null;
-    ShipToCountryCode: string|null;
     ShipVia: string|null,
     CustomerPONo: string|null;
     FOB: string|null;

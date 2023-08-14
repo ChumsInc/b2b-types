@@ -55,7 +55,7 @@ export interface BillToCustomer extends CustomerKey, Customer, CustomerAddress {
     CustomerStatus: string;
 }
 export interface ShipToAddress {
-    ShipToName: string;
+    ShipToName: string | null;
     ShipToAddress1: string | null;
     ShipToAddress2: string | null;
     ShipToAddress3: string | null;
@@ -109,4 +109,14 @@ export interface CustomerPaymentCard extends CustomerKey {
     CardType: string;
     CreditCardGUID: string;
     CreditCardID: string;
+}
+export interface BillToAddress {
+    BillToName: string | null;
+    BillToAddress1: string | null;
+    BillToAddress2: string | null;
+    BillToAddress3: string | null;
+    BillToCity: string | null;
+    BillToState: string | null;
+    BillToZipCode: string | null;
+    BillToCountryCode: string | null;
 }
