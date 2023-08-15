@@ -281,6 +281,7 @@ export interface CartProduct extends CartItem {
     productId: number;
     name: string;
     colorCode?: string;
+    colorName?: string;
     image: string;
     msrp?: string | number | null;
     stdPrice?: string | number | null;
