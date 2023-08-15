@@ -152,7 +152,13 @@ export interface ProductMixItem extends ProductBase {
     productStatus?: string | null;
 }
 export type ProductMixVariant = ProductMixItem;
-export interface ProductMixComponent {
+export interface ProductSwatchBase {
+    id: number;
+    color?: ProductColor;
+    additionalData?: ProductSwatchAdditionalData;
+    itemQuantity?: number;
+}
+export interface ProductMixComponent extends ProductSwatchBase {
     id: number;
     mixID: number;
     itemCode: string;
@@ -177,19 +183,21 @@ export interface ProductColorItemAdditionalData {
     season_id?: number | null;
     season?: ProductSeason;
 }
-export interface ProductAdditionalData {
+export interface ProductSwatchAdditionalData {
+    swatch_format?: string;
+    swatch_code?: string | null;
+}
+export interface ProductAdditionalData extends ProductSwatchAdditionalData {
     size?: string;
     subtitle?: string;
     formatted_name?: string;
-    swatch_format?: string;
-    swatch_code?: string | null;
     image_filename?: string | null;
     season_id?: number | null;
     season?: ProductSeason;
     best_seller?: boolean | null;
     upcycled?: boolean | null;
 }
-export interface ProductColorItem extends ProductBase {
+export interface ProductColorItem extends ProductBase, ProductSwatchBase {
     productId: number;
     colorsId: number;
     colorCode: string;
@@ -198,6 +206,7 @@ export interface ProductColorItem extends ProductBase {
     additionalData?: ProductColorItemAdditionalData;
     color: ProductColor;
     productStatus?: string | null;
+    itemQuantity?: number;
 }
 export type ProductColorVariant = ProductColorItem;
 export interface B2BProductImage {
