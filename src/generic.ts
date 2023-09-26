@@ -34,3 +34,8 @@ export interface Selectable {
 export interface EmptyObject {
 }
 
+export interface WhereUsed {
+    id: number;
+    keyword: string;
+    active: boolean;
+}
