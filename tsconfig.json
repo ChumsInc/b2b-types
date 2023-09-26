@@ -3,10 +3,9 @@
 
   "compilerOptions": {
     "allowJs": true,
-    "outDir": "lib",
     "module": "ES2022",
     "moduleResolution": "node",
-    "emitDeclarationOnly": false,
+    "emitDeclarationOnly": true,
     "declaration": true
   },
   "include": [

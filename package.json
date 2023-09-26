@@ -2,13 +2,11 @@
   "name": "b2b-types",
   "version": "2.0.10",
   "description": "typescript typings for Chums B2B & associated apps",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run compile",
-    "compile": "npx tsc",
-    "clean": "npx rimraf ./lib",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
