@@ -15,9 +15,9 @@
   "author": "Steve Montgomery",
   "license": "ISC",
   "devDependencies": {
-    "@tsconfig/node18": "^2.0.1",
+    "@tsconfig/node18": "^18.2.2",
     "auto-changelog": "^2.4.0",
-    "rimraf": "^4.1.3",
+    "rimraf": "^5.0.4",
     "typescript": "^5.0.2"
   },
   "auto-changelog": {
