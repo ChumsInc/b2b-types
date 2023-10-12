@@ -125,6 +125,7 @@ export interface BasicProduct extends ProductBase {
     season_active: boolean | null;
     season_available: boolean;
     season_teaser: string | null;
+    preSeasonMessage?: string | null;
     anticipatedPrice?: string | number | null;
     images?: ProductAlternateImage[];
     productStatus?: string | null;
@@ -230,6 +231,7 @@ export interface ProductSeason {
     properties?: {
         color?: string;
     };
+    preSeasonMessage?: string | null;
     timestamp?: string;
 }
 export interface ProductListItem {
@@ -293,6 +295,7 @@ export interface CartProduct extends CartItem {
     seasonAvailable?: boolean | null;
     seasonDescription?: string | null;
     seasonTeaser?: string | null;
+    preSeasonMessage?: string | null;
     quantityAvailable?: number;
     priceCodeRecord?: CustomerPriceRecord | null;
     price?: string | null;

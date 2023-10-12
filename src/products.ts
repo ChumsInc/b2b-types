@@ -34,7 +34,7 @@ export interface ProductCategory {
 export interface GenericProductCategoryChild {
     id: number,
     parentId: number,
-    itemType: 'section'|'category'|'product'|'link',
+    itemType: 'section' | 'category' | 'product' | 'link',
     sectionTitle: string,
     sectionDescription: string,
     title: string,
@@ -48,6 +48,7 @@ export interface GenericProductCategoryChild {
     status: BooleanLike,
     timestamp: string,
 }
+
 export interface CategoryChildSection extends GenericProductCategoryChild {
     itemType: 'section',
     productsId: 0,     // should always be zero?
@@ -72,7 +73,11 @@ export interface CategoryChildLink extends GenericProductCategoryChild {
     urlOverride: string;
 }
 
-export type ProductCategoryChild = CategoryChildSection | CategoryChildCategory | CategoryChildProduct | CategoryChildLink;
+export type ProductCategoryChild =
+    CategoryChildSection
+    | CategoryChildCategory
+    | CategoryChildProduct
+    | CategoryChildLink;
 
 export type ProductType = 'R' | 'F' | 'K' | 'D';
 
@@ -139,9 +144,10 @@ export interface BasicProduct extends ProductBase {
     season_active: boolean | null,
     season_available: boolean,
     season_teaser: string | null,
+    preSeasonMessage?: string | null;
     anticipatedPrice?: string | number | null,
     images?: ProductAlternateImage[],
-    productStatus?: string|null;
+    productStatus?: string | null;
 }
 
 export interface SellAsSelfProduct extends BasicProduct {
@@ -170,14 +176,14 @@ export interface ProductMixItem extends ProductBase {
     productId: number,
     mixName: string,
     items: ProductMixComponent[];
-    productStatus?: string|null;
+    productStatus?: string | null;
 }
 
 export type ProductMixVariant = ProductMixItem;
 
 export interface ProductSwatchBase {
     id: number;
-    color?:ProductColor;
+    color?: ProductColor;
     additionalData?: ProductSwatchAdditionalData;
     itemQuantity?: number;
 }
@@ -192,7 +198,7 @@ export interface ProductMixComponent extends ProductSwatchBase {
     color_name?: string,
     color?: ProductColor,
     additionalData?: ProductAdditionalData
-    productStatus?: string|null;
+    productStatus?: string | null;
 }
 
 export interface ProductColor {
@@ -234,9 +240,10 @@ export interface ProductColorItem extends ProductBase, ProductSwatchBase {
     upc?: string | null,
     additionalData?: ProductColorItemAdditionalData,
     color: ProductColor;
-    productStatus?: string|null;
+    productStatus?: string | null;
     itemQuantity?: number;
 }
+
 export type ProductColorVariant = ProductColorItem;
 
 export interface B2BProductImage {
@@ -262,6 +269,7 @@ export interface ProductSeason {
     properties?: {
         color?: string,
     },
+    preSeasonMessage?: string | null;
     timestamp?: string
 }
 
@@ -286,7 +294,7 @@ export interface ProductListItem {
     minPrice?: string | number,
     maxPrice?: string | number,
     salePrice?: string | number,
-    product_season_id: number|null,
+    product_season_id: number | null,
     season_code: string | null,
 }
 
@@ -310,27 +318,28 @@ export interface CartItem {
     discountPercent?: number;
     comment?: string;
     priceLevel?: string;
-    lineKey?:string;
+    lineKey?: string;
     promoCode?: string;
 }
 
 export interface CartProduct extends CartItem {
     productId: number,
     name: string,
-    colorCode?:string;
+    colorCode?: string;
     colorName?: string;
     image: string;
     msrp?: string | number | null;
     stdPrice?: string | number | null;
     priceCode?: string | null;
     salesUM?: string | null;
-    stdUM?: string|null;
+    stdUM?: string | null;
     salesUMFactor?: number | null;
-    seasonCode?: string|null;
-    seasonAvailable?: boolean|null;
-    seasonDescription?: string|null;
-    seasonTeaser?: string|null;
+    seasonCode?: string | null;
+    seasonAvailable?: boolean | null;
+    seasonDescription?: string | null;
+    seasonTeaser?: string | null;
+    preSeasonMessage?: string|null;
     quantityAvailable?: number;
-    priceCodeRecord?: CustomerPriceRecord|null;
-    price?: string|null;
+    priceCodeRecord?: CustomerPriceRecord | null;
+    price?: string | null;
 }
