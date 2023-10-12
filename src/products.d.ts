@@ -300,4 +300,5 @@ export interface CartProduct extends CartItem {
     quantityAvailable?: number;
     priceCodeRecord?: CustomerPriceRecord | null;
     price?: string | null;
+    season?: ProductSeason | null;
 }
