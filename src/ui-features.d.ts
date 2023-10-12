@@ -35,6 +35,7 @@ export interface MenuItem {
     status: boolean | 1 | 0;
     menuId?: number;
     menu?: Menu;
+    requireLogin?: boolean;
 }
 export interface Message {
     id: number;
