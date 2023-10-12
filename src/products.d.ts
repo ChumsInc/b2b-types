@@ -119,6 +119,7 @@ export interface BasicProduct extends ProductBase {
     redirectToParent: boolean;
     parentProductKeyword: string | null;
     additionalData?: ProductAdditionalData;
+    season?: ProductSeason | null;
     product_season_id: number | null;
     season_code: string | null;
     season_description: string | null;
