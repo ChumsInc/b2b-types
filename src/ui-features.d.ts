@@ -78,4 +78,5 @@ export interface ContentPage {
     css?: string | null;
     subtitle?: string | null;
     searchWords: string | null;
+    redirectTo?: number | null;
 }

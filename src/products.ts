@@ -243,6 +243,7 @@ export interface ProductColorItem extends ProductBase, ProductSwatchBase {
     color: ProductColor;
     productStatus?: string | null;
     itemQuantity?: number;
+    selfStatus?: boolean;
 }
 
 export type ProductColorVariant = ProductColorItem;
