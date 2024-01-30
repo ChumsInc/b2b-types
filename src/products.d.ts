@@ -196,6 +196,7 @@ export interface ProductAdditionalData extends ProductSwatchAdditionalData {
     image_filename?: string | null;
     season_id?: number | null;
     season?: ProductSeason;
+    seasonAvailable?: boolean;
     best_seller?: boolean | null;
     upcycled?: boolean | null;
 }
@@ -221,6 +222,7 @@ export interface ProductAlternateImage extends B2BProductImage {
     productId: number;
     priority: number;
     status: boolean | 1 | 0;
+    colorCodes?: string | null;
     timestamp?: string;
 }
 export interface ProductSeason {

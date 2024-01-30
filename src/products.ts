@@ -223,14 +223,15 @@ export interface ProductSwatchAdditionalData {
 }
 
 export interface ProductAdditionalData extends ProductSwatchAdditionalData {
-    size?: string,
-    subtitle?: string,
-    formatted_name?: string,
-    image_filename?: string | null,
-    season_id?: number | null,
-    season?: ProductSeason,
-    best_seller?: boolean | null,
-    upcycled?: boolean | null,
+    size?: string;
+    subtitle?: string;
+    formatted_name?: string;
+    image_filename?: string | null;
+    season_id?: number | null;
+    season?: ProductSeason;
+    seasonAvailable?: boolean;
+    best_seller?: boolean | null;
+    upcycled?: boolean | null;
 }
 
 export interface ProductColorItem extends ProductBase, ProductSwatchBase {
@@ -258,6 +259,7 @@ export interface ProductAlternateImage extends B2BProductImage {
     productId: number,
     priority: number,
     status: boolean | 1 | 0,
+    colorCodes?: string|null;
     timestamp?: string,
 }
 
