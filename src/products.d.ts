@@ -261,6 +261,7 @@ export interface ProductListItem {
     salePrice?: string | number;
     product_season_id: number | null;
     season_code: string | null;
+    seasonAvailable: boolean;
 }
 export interface ProductList {
     [key: string]: ProductListItem;
