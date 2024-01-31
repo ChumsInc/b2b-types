@@ -184,6 +184,7 @@ export interface ProductColorItemAdditionalData {
     image_filename?: string | null;
     season_id?: number | null;
     season?: ProductSeason;
+    seasonAvailable?: boolean;
 }
 export interface ProductSwatchAdditionalData {
     swatch_format?: string;
