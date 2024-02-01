@@ -219,8 +219,10 @@ export interface ProductColorItemAdditionalData {
 }
 
 export interface ProductSwatchAdditionalData {
-    swatch_format?: string,
-    swatch_code?: string | null,
+    swatch_format?: string;
+    swatch_code?: string | null;
+    season?: ProductSeason,
+    seasonAvailable?: boolean;
 }
 
 export interface ProductAdditionalData extends ProductSwatchAdditionalData {
