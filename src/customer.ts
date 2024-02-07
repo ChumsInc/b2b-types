@@ -114,6 +114,7 @@ export interface CustomerUser {
     name: string;
     email: string;
     accountType: UserAccessType;
+    billTo?: boolean;
     shipToCode?: string[];
     notes?: string;
 }
