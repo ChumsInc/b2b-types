@@ -80,3 +80,27 @@ export interface ContentPage {
     searchWords: string | null;
     redirectTo?: number | null;
 }
+export interface BannerImage {
+    filename: string;
+    width: number;
+    height: number;
+}
+export interface Banner {
+    id: number;
+    title: string;
+    priority: number | null;
+    url: string | null;
+    startDate: string | null;
+    endDate: string | null;
+    active: boolean;
+    image?: null | {
+        desktop: BannerImage;
+        mobile?: BannerImage;
+    };
+    overlay?: null | {
+        sxProps?: unknown;
+        innerText: string;
+    };
+    src?: string | null;
+    sxProps?: unknown | null;
+}
