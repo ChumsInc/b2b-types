@@ -44,6 +44,7 @@ export interface Customer extends CustomerKey, CustomerAddress, CustomerSalesper
     CustomerName: string;
     TelephoneNo: string | null;
     EmailAddress: string;
+    BillToName: string;
 }
 
 export interface BillToCustomer extends CustomerKey, Customer, CustomerAddress {
