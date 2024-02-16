@@ -1,4 +1,4 @@
-import {BooleanLike} from "./generic.js";
+import {BooleanLike, LayoutAttributes} from "./generic.js";
 import {CustomerPriceRecord} from "./customer";
 
 export type ProductSellAsVariants = 0;
@@ -45,7 +45,8 @@ export interface GenericProductCategoryChild {
     productsId: number,     // should always be zero?
     categoriesId: number,   // should always be zero?
     priority: number,
-    status: BooleanLike,
+    status: BooleanLike;
+    layoutAttributes?: LayoutAttributes;
     timestamp: string,
 }
 

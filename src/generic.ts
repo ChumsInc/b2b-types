@@ -39,3 +39,12 @@ export interface WhereUsed {
     keyword: string;
     active: boolean;
 }
+
+export type LayoutWidth = 'xs'|'sm'|'md'|'lg'|'xl';
+export type LayoutWidths = {
+    [key in LayoutWidth]?: number | string;
+};
+export interface LayoutAttributes {
+    widths?:LayoutWidths;
+    className?: string;
+}
