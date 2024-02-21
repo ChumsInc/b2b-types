@@ -353,4 +353,5 @@ export interface CartProduct extends CartItem {
     priceCodeRecord?: CustomerPriceRecord | null;
     price?: string | null;
     season?: ProductSeason|null;
+    message?: string;
 }
