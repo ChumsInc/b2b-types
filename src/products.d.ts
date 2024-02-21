@@ -186,6 +186,7 @@ export interface ProductColorItemAdditionalData {
     season_id?: number | null;
     season?: ProductSeason;
     seasonAvailable?: boolean;
+    message?: string;
 }
 export interface ProductSwatchAdditionalData {
     swatch_format?: string;
