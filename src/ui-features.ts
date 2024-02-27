@@ -92,6 +92,7 @@ export interface BannerImage {
     filename: string;
     width: number;
     height: number;
+    altText: string;
 }
 
 export type BannerImageType = 'desktop'|'mobile';
