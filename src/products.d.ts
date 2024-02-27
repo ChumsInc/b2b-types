@@ -204,6 +204,9 @@ export interface ProductAdditionalData extends ProductSwatchAdditionalData {
     seasonAvailable?: boolean;
     best_seller?: boolean | null;
     upcycled?: boolean | null;
+    heatTransfer?: boolean | null;
+    sublimation?: boolean | null;
+    rfidBlocking?: boolean | null;
 }
 export interface ProductColorItem extends ProductBase, ProductSwatchBase {
     productId: number;
