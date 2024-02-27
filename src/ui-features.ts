@@ -94,6 +94,17 @@ export interface BannerImage {
     height: number;
 }
 
+export type BannerImageType = 'desktop'|'mobile';
+
+export type BannerImageGroup = {
+    [key in BannerImageType]?: BannerImage;
+};
+
+export interface BannerImageOverlay {
+    sxProps?: unknown|null;
+    innerText: string;
+}
+
 export interface Banner {
     id: number;
     title: string;
@@ -102,14 +113,8 @@ export interface Banner {
     startDate: string | null;
     endDate: string | null;
     active: boolean;
-    image?: null | {
-        desktop: BannerImage;
-        mobile?: BannerImage;
-    },
-    overlay?: null | {
-        sxProps?: unknown;
-        innerText: string;
-    }
-    src?: string|null;
+    image?:BannerImageGroup|null,
+    overlay?: BannerImageOverlay | null;
+    componentSrc?: string|null;
     sxProps?: unknown|null;
 }
