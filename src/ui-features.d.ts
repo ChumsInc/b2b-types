@@ -85,6 +85,8 @@ export interface BannerImage {
     width: number;
     height: number;
     altText: string;
+    overlay?: string;
+    overlaySxProps?: unknown | null;
 }
 export type BannerImageType = 'desktop' | 'mobile';
 export type BannerImageGroup = {
