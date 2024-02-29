@@ -111,7 +111,7 @@ export interface BannerImageOverlay {
 export interface Banner {
     id: number;
     title: string;
-    priority: number|null;
+    priority: number;
     url: string | null;
     startDate: string | null;
     endDate: string | null;
