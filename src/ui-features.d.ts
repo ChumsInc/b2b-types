@@ -1,4 +1,6 @@
-import { BooleanLike } from "./generic.js";
+import {BooleanLike} from "./generic.js";
+
+
 export interface Slide {
     id: number;
     name: string;
@@ -15,6 +17,7 @@ export interface Slide {
     sizes: string[];
     mainOverlay: string;
 }
+
 export interface Menu {
     id: number;
     title: string;
@@ -24,6 +27,7 @@ export interface Menu {
     items?: MenuItem[];
     parents?: number[];
 }
+
 export interface MenuItem {
     id: number;
     parentId: number;
@@ -37,6 +41,7 @@ export interface MenuItem {
     menu?: Menu;
     requireLogin?: boolean;
 }
+
 export interface Message {
     id: number;
     type: string;
@@ -48,6 +53,7 @@ export interface Message {
     allow_nextday: boolean | number;
     allow_twoday: boolean | number;
 }
+
 export interface SearchResult {
     keyword: string;
     parent: string | null;
@@ -64,38 +70,44 @@ export interface SearchResult {
     };
     score: number;
 }
+
 export interface ContentPage {
     id: number;
-    keyword: string | null;
-    title: string | null;
-    metaDescription: string | null;
-    content: string | null;
-    filename: string | null;
-    status: boolean | BooleanLike;
+    keyword: string|null;
+    title: string|null;
+    metaDescription: string|null;
+    content: string|null;
+    filename: string|null;
+    status: boolean|BooleanLike;
     changefreq: string;
     priority: number;
-    lifestyle?: string | null;
-    css?: string | null;
-    subtitle?: string | null;
-    searchWords: string | null;
-    redirectTo?: number | null;
+    lifestyle?: string|null;
+    css?: string|null;
+    subtitle?: string|null;
+    searchWords: string|null;
+    redirectTo?: number|null;
 }
+
 export interface BannerImage {
     filename: string;
     width: number;
     height: number;
     altText: string;
     overlay?: string;
-    overlaySxProps?: unknown | null;
+    overlaySxProps?: unknown|null;
 }
-export type BannerImageType = 'desktop' | 'mobile';
+
+export type BannerImageType = 'desktop'|'mobile';
+
 export type BannerImageGroup = {
     [key in BannerImageType]?: BannerImage;
 };
+
 export interface BannerImageOverlay {
-    sxProps?: unknown | null;
+    sxProps?: unknown|null;
     innerText: string;
 }
+
 export interface Banner {
     id: number;
     title: string;
@@ -104,8 +116,8 @@ export interface Banner {
     startDate: string | null;
     endDate: string | null;
     active: boolean;
-    image?: BannerImageGroup | null;
+    image?:BannerImageGroup|null,
     overlay?: BannerImageOverlay | null;
-    componentSrc?: string | null;
-    sxProps?: unknown | null;
+    componentSrc?: string|null;
+    sxProps?: unknown|null;
 }

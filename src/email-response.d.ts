@@ -7,7 +7,7 @@ export interface EmailResponse {
     response: string;
     envelope: {
         from: string;
-        to: string[];
-    };
+        to: string[]
+    }
     messageId: string;
 }

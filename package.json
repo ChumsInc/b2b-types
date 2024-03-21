@@ -21,5 +21,13 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
+  },
+  "dependencies": {
+    "chums-types": "github:ChumsInc/chums-types"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts"
+    }
   }
 }

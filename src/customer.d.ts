@@ -1,5 +1,6 @@
-import { YesNo } from "./generic.js";
-import { UserAccessType } from "./user.js";
+import {YesNo} from "./generic.js";
+import {UserAccessType} from "./user.js";
+
 export interface CustomerAddress {
     CustomerName: string;
     AddressLine1: string | null;
@@ -11,32 +12,41 @@ export interface CustomerAddress {
     CountryCode: string | null;
     changed?: boolean;
 }
+
 export type CustomerAddressField = keyof CustomerAddress;
+
 export interface CustomerSalesperson {
     SalespersonDivisionNo: string;
     SalespersonNo: string;
 }
+
 export interface Salesperson extends CustomerSalesperson {
     SalespersonName: string;
     active: boolean | 1 | 0;
 }
+
 export interface CustomerKey {
     ARDivisionNo: string;
     CustomerNo: string;
     ShipToCode?: string | null;
 }
+
 export interface RecentCustomerKey extends CustomerKey {
     ts: number;
 }
+
+
 export interface BasicCustomer extends CustomerKey {
     CustomerName?: string;
 }
+
 export interface Customer extends CustomerKey, CustomerAddress, CustomerSalesperson {
     CustomerName: string;
     TelephoneNo: string | null;
     EmailAddress: string;
     BillToName?: string;
 }
+
 export interface BillToCustomer extends CustomerKey, Customer, CustomerAddress {
     TelephoneExt: string | null;
     URLAddress: string | null;
@@ -55,6 +65,7 @@ export interface BillToCustomer extends CustomerKey, Customer, CustomerAddress {
     Reseller: YesNo | null;
     CustomerStatus: string;
 }
+
 export interface ShipToAddress {
     ShipToName: string | null;
     ShipToAddress1: string | null;
@@ -65,6 +76,7 @@ export interface ShipToAddress {
     ShipToZipCode: string | null;
     ShipToCountryCode: string | null;
 }
+
 export interface ShipToCustomer extends CustomerKey, ShipToAddress, CustomerSalesperson {
     ShipToCode: string;
     ShipToName: string;
@@ -75,6 +87,7 @@ export interface ShipToCustomer extends CustomerKey, ShipToAddress, CustomerSale
     ResidentialAddress: YesNo;
     Reseller: YesNo | null;
 }
+
 export interface CustomerContact extends CustomerKey, CustomerAddress {
     ContactCode: string;
     ContactName: string;
@@ -83,16 +96,20 @@ export interface CustomerContact extends CustomerKey, CustomerAddress {
     EmailAddress: string;
     ContactTitle: string | null;
 }
+
 export type PricingMethodType = 'O' | 'D' | 'C' | 'M' | 'P';
+
 export interface CustomerPriceRecord {
     PriceCode: string;
     ItemCode: string;
     PricingMethod: PricingMethodType;
     DiscountMarkup1: number;
 }
+
 export interface CustomerPriceList {
     [key: string]: CustomerPriceRecord;
 }
+
 export interface CustomerUser {
     id: number;
     name: string;
@@ -102,7 +119,9 @@ export interface CustomerUser {
     shipToCode?: string[];
     notes?: string;
 }
+
 export type AccountCustomerUser = CustomerUser & CustomerKey;
+
 export interface CustomerPaymentCard extends CustomerKey {
     PaymentType: string;
     ExpirationDateYear: string;
@@ -112,9 +131,10 @@ export interface CustomerPaymentCard extends CustomerKey {
     CreditCardGUID: string;
     CreditCardID: string;
 }
+
 export interface BillToAddress {
-    BillToName: string | null;
-    BillToAddress1: string | null;
+    BillToName: string|null;
+    BillToAddress1: string|null;
     BillToAddress2: string | null;
     BillToAddress3: string | null;
     BillToCity: string | null;
