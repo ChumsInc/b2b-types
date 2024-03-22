@@ -10,7 +10,6 @@ export interface CustomerAddress {
     State: string | null;
     ZipCode: string | null;
     CountryCode: string | null;
-    changed?: boolean;
 }
 
 export type CustomerAddressField = keyof CustomerAddress;
