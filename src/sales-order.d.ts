@@ -27,7 +27,8 @@ export interface SalesOrderHeader extends BillToAddress, ShipToAddress {
     EmailAddress: string|null;
     TermsCode: string;
     TermsCodeDesc: string|null;
-    CurrentInvoiceNo: string|null;
+    CurrentInvoiceNo?: string|null;
+    LastInvoiceNo?: string|null;
     LastInvoiceDate: string|null;
     SalespersonDivisionNo: string|null;
     SalespersonNo: string|null;
