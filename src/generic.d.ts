@@ -42,7 +42,7 @@ export interface WhereUsed {
 
 export type LayoutWidth = 'xs'|'sm'|'md'|'lg'|'xl';
 export type LayoutWidths = {
-    [key in LayoutWidth]?: number;
+    [key in LayoutWidth]?: number|string|null;
 };
 export interface LayoutAttributes {
     widths?:LayoutWidths;
