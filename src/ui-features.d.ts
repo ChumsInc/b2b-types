@@ -86,7 +86,7 @@ export interface ContentPage {
     subtitle?: string|null;
     searchWords: string|null;
     redirectTo?: number|null;
-    requiresLogin?: boolean;
+    requiresLogin?: boolean|null;
 }
 
 export interface BannerImage {
