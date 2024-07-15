@@ -78,7 +78,7 @@ export interface ContentPage {
     metaDescription: string|null;
     content: string|null;
     filename: string|null;
-    status: boolean|BooleanLike;
+    status: boolean;
     changefreq: string;
     priority: number;
     lifestyle?: string|null;
@@ -86,6 +86,7 @@ export interface ContentPage {
     subtitle?: string|null;
     searchWords: string|null;
     redirectTo?: number|null;
+    requiresLogin?: boolean;
 }
 
 export interface BannerImage {
