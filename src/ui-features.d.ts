@@ -49,9 +49,9 @@ export interface Message {
     message: string;
     start: string | null;
     end: string | null;
-    active: boolean | number;
-    allow_nextday: boolean | number;
-    allow_twoday: boolean | number;
+    active: boolean;
+    allow_nextday: boolean;
+    allow_twoday: boolean;
 }
 
 export interface SearchResult {
