@@ -111,6 +111,7 @@ export interface CustomerPriceList {
 
 export interface CustomerUser {
     id: number;
+    accessId: number;
     name: string;
     email: string;
     accountType: UserAccessType;
