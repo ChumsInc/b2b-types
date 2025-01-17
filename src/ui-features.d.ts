@@ -59,7 +59,7 @@ export interface SearchResult {
     parent: string | null;
     title: string;
     sku: string;
-    pagetype: string;
+    pagetype: 'product'|'page'|'category';
     image: string;
     color: string;
     additional_data?: {
