@@ -44,6 +44,8 @@ export interface Customer extends CustomerKey, CustomerAddress, CustomerSalesper
     TelephoneNo: string | null;
     EmailAddress: string;
     BillToName?: string;
+    ParentDivisionNo?: string|null;
+    ParentCustomerNo?: string|null;
 }
 
 export interface BillToCustomer extends CustomerKey, Customer, CustomerAddress {
@@ -142,3 +144,4 @@ export interface BillToAddress {
     BillToZipCode: string | null;
     BillToCountryCode: string | null;
 }
+
