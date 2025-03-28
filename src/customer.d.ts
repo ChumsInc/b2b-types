@@ -39,7 +39,20 @@ export interface BasicCustomer extends CustomerKey {
     CustomerName?: string;
 }
 
-export interface Customer extends CustomerKey, CustomerAddress, CustomerSalesperson {
+export interface ParentCustomer {
+    ParentDivisionNo?: string|null;
+    ParentCustomerNo?: string|null;
+    ParentCustomerName?: string|null;
+    ParentAddressLine1?: string|null;
+    ParentAddressLine2?: string|null;
+    ParentAddressLine3?: string|null;
+    ParentCity?: string|null;
+    ParentState?: string|null;
+    ParentZipCode?: string|null;
+    ParentCountryCode?: string|null;
+}
+
+export interface Customer extends CustomerKey, CustomerAddress, CustomerSalesperson, ParentCustomer {
     CustomerName: string;
     TelephoneNo: string | null;
     EmailAddress: string;
