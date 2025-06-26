@@ -23,7 +23,7 @@ export interface Menu {
     title: string;
     description: string;
     className: string;
-    status: boolean | 1 | 0;
+    status: boolean;
     items?: MenuItem[];
     parents?: number[];
 }
@@ -36,7 +36,7 @@ export interface MenuItem {
     className: string;
     priority: number;
     url: string;
-    status: boolean | 1 | 0;
+    status: boolean;
     menuId?: number;
     menu?: Menu;
     requireLogin?: boolean;
