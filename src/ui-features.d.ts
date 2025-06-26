@@ -1,6 +1,3 @@
-import {BooleanLike} from "./generic.js";
-
-
 export interface Slide {
     id: number;
     name: string;
@@ -59,7 +56,7 @@ export interface SearchResult {
     parent: string | null;
     title: string;
     sku: string;
-    pagetype: 'product'|'page'|'category';
+    pagetype: 'product' | 'page' | 'category';
     image: string;
     color: string;
     additional_data?: {
@@ -73,20 +70,20 @@ export interface SearchResult {
 
 export interface ContentPage {
     id: number;
-    keyword: string|null;
-    title: string|null;
-    metaDescription: string|null;
-    content: string|null;
-    filename: string|null;
+    keyword: string | null;
+    title: string | null;
+    metaDescription: string | null;
+    content: string | null;
+    filename: string | null;
     status: boolean;
     changefreq: string;
     priority: number;
-    lifestyle?: string|null;
-    css?: string|null;
-    subtitle?: string|null;
-    searchWords: string|null;
-    redirectTo?: number|null;
-    requiresLogin?: boolean|null;
+    lifestyle?: string | null;
+    css?: string | null;
+    subtitle?: string | null;
+    searchWords: string | null;
+    redirectTo?: number | null;
+    requiresLogin?: boolean | null;
 }
 
 export interface BannerImage {
@@ -95,17 +92,17 @@ export interface BannerImage {
     height: number;
     altText: string;
     overlay?: string;
-    overlaySxProps?: unknown|null;
+    overlaySxProps?: unknown | null;
 }
 
-export type BannerImageType = 'desktop'|'mobile';
+export type BannerImageType = 'desktop' | 'mobile';
 
 export type BannerImageGroup = {
     [key in BannerImageType]?: BannerImage;
 };
 
 export interface BannerImageOverlay {
-    sxProps?: unknown|null;
+    sxProps?: unknown | null;
     innerText: string;
 }
 
@@ -117,8 +114,8 @@ export interface Banner {
     startDate: string | null;
     endDate: string | null;
     active: boolean;
-    image?:BannerImageGroup|null,
+    image?: BannerImageGroup | null,
     overlay?: BannerImageOverlay | null;
-    componentSrc?: string|null;
-    sxProps?: unknown|null;
+    componentSrc?: string | null;
+    sxProps?: unknown | null;
 }
