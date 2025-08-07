@@ -357,4 +357,5 @@ export interface CartProduct extends CartItem {
     price?: string | null;
     season?: ProductSeason|null;
     message?: string;
+    requiresCustomization?: boolean;
 }
