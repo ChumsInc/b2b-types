@@ -240,6 +240,7 @@ export interface ProductAdditionalData extends ProductSwatchAdditionalData {
     heatTransfer?: boolean|null;
     sublimation?: boolean|null;
     rfidBlocking?: boolean|null;
+    newColors?: boolean|null;
 }
 
 export interface ProductColorItem extends ProductBase, ProductSwatchBase {
