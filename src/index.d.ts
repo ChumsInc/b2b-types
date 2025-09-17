@@ -159,5 +159,5 @@ export type {
     UserAccessType,
 } from './user';
 
-export {CookieConsentSection, CookieConsentRecord, CookieConsentSettings, CookieConsentChange} from 'chums-types'
+export {CookieConsentSection, CookieConsentRecord, CookieConsentSettings, CookieConsentChange, CookieConsentStatus} from 'chums-types'
 
