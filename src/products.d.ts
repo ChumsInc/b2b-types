@@ -360,3 +360,8 @@ export interface CartProduct extends CartItem {
     message?: string;
     requiresCustomization?: boolean;
 }
+
+export interface ProductImage {
+    filename: string | null;
+    itemCode: string | null;
+}
