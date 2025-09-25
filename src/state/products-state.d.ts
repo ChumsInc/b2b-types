@@ -6,7 +6,7 @@ export interface ProductsState {
     product: Product | null;
     selectedProduct: Product | null;
     selectedItemCode: string | null;
-    image: ProductImage;
+    image: ProductImage|null;
     colorCode: string;
     variantId: number | null;
     loading: boolean;
