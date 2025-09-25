@@ -1,10 +1,9 @@
-import type {Menu, MenuItem} from "../ui-features";
+import type {Menu} from "../ui-features";
 
 export interface MenuState {
     productMenu: Menu | null;
-    items: MenuItem[];
+    productMenuStatus: 'idle' | 'loading' | 'rejected';
     resourcesMenu: Menu | null;
-    loading: string[];
-    loaded: boolean;
+    resourcesMenuStatus: 'idle' | 'loading' | 'rejected';
     isOpen: boolean;
 }
