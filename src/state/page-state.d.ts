@@ -7,4 +7,5 @@ export interface PageState {
     status: 'idle' | 'loading';
     loaded: boolean;
     content: ContentPage | null;
+    html: string | null;
 }
