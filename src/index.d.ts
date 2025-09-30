@@ -159,7 +159,7 @@ export type {
     UserAccessType,
 } from './user';
 
-export {CookieConsentSection, CookieConsentRecord, CookieConsentSettings, CookieConsentChange, CookieConsentStatus, CookieConsentBody} from 'chums-types'
+export {CookieConsentSection, CookieConsentRecord, CookieConsentSettings, CookieConsentChange, CookieConsentStatus, CookieConsentBody, CookieConsentInfo, CookieConsentSectionInfo} from 'chums-types'
 
 export type {AppState} from './state/app-state';
 export type {BannersState} from './state/banners-state';
