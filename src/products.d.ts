@@ -241,6 +241,7 @@ export interface ProductAdditionalData extends ProductSwatchAdditionalData {
     sublimation?: boolean|null;
     rfidBlocking?: boolean|null;
     newColors?: boolean|null;
+    isRedirect?: boolean|null;
 }
 
 export interface ProductColorItem extends ProductBase, ProductSwatchBase {

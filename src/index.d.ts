@@ -118,6 +118,7 @@ export type {
     SellAsSelfProduct,
     SellAsVariantsProduct,
     ProductMixVariant,
+    ProductImage
 } from './products';
 
 export type {
