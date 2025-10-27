@@ -311,6 +311,7 @@ export interface ProductListItem {
     product_season_id: number | null,
     season_code: string | null;
     seasonAvailable: boolean;
+    isRedirect?: boolean;
 }
 
 export interface ProductList {
