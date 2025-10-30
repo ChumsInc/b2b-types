@@ -31,6 +31,7 @@ export type {
     RecentCustomerKey,
     ShipToCustomer,
     AccountCustomerUser,
+    ParentCustomer,
 } from './customer';
 
 export type {
@@ -118,7 +119,7 @@ export type {
     SellAsSelfProduct,
     SellAsVariantsProduct,
     ProductMixVariant,
-    ProductImage
+    ProductImage,
 } from './products';
 
 export type {
@@ -160,7 +161,16 @@ export type {
     UserAccessType,
 } from './user';
 
-export {CookieConsentSection, CookieConsentRecord, CookieConsentSettings, CookieConsentChange, CookieConsentStatus, CookieConsentBody, CookieConsentInfo, CookieConsentSectionInfo} from 'chums-types'
+export {
+    CookieConsentSection,
+    CookieConsentRecord,
+    CookieConsentSettings,
+    CookieConsentChange,
+    CookieConsentStatus,
+    CookieConsentBody,
+    CookieConsentInfo,
+    CookieConsentSectionInfo
+} from 'chums-types'
 
 export type {AppState} from './state/app-state';
 export type {BannersState} from './state/banners-state';
