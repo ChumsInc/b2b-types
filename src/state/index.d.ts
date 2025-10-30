@@ -1,9 +1,9 @@
-export type {AppState} from './state/app-state';
-export type {BannersState} from './state/banners-state';
-export type {CategoryState} from './state/category-state';
-export type {CookieConsentState} from './state/cookie-consent-state';
-export type {KeywordsState} from './state/keywords-state';
-export type {ProductsState} from './state/products-state'
-export type {VersionState} from './state/version-state'
-export type {PreloadedState} from './state/preloaded-state'
+export type {AppState} from './app-state';
+export type {BannersState} from './banners-state';
+export type {CategoryState} from './category-state';
+export type {CookieConsentState} from './cookie-consent-state';
+export type {KeywordsState} from './keywords-state';
+export type {ProductsState} from './products-state'
+export type {VersionState} from './version-state'
+export type {PreloadedState} from './preloaded-state'
 
