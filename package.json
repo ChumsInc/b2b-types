@@ -1,7 +1,7 @@
 {
   "name": "b2b-types",
   "version": "2.2.3",
-  "description": "typescript typings for Chums B2B & associated apps",
+  "description": "[DEPRECATED] typescript typings for Chums B2B & associated apps; Use ChumsInc/chums-types instead",
   "types": "./src/index.d.ts",
   "type": "module",
   "scripts": {
